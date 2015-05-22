@@ -1,12 +1,11 @@
 package com.samwilskey.flightsimchecklist.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.samwilskey.flightsimchecklist.Developer;
 import com.samwilskey.flightsimchecklist.R;
@@ -48,10 +47,13 @@ public class MainActivity extends Activity {
         DeveloperAdapter devAdapter = new DeveloperAdapter(this, mDevelopers);
         mListView.setAdapter(devAdapter);
         mListView.setEmptyView(mEmptyTextView);
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        mListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "You clicked " + mDevelopers[position].getName(), Toast.LENGTH_LONG).show();
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                Intent intent = new Intent(MainActivity.this, ChecklistActivity.class);
+                startActivity(intent);
+                return true;
             }
         });
 
@@ -78,14 +80,21 @@ public class MainActivity extends Activity {
             JSONObject jsonObject = devs.getJSONObject(i);
             Developer developer = new Developer();
             developer.setName(jsonObject.getString("name"));
-            String[] aircraft = new String [jsonObject.getJSONArray("models").length()];
-            for(int j = 0; j < jsonObject.getJSONArray("models").length(); j++) {
-                String string = jsonObject.getJSONArray("models").getString(j);
-                aircraft[j] = string;
-            }
-            developer.setAircraftModels(aircraft);
+
+            developer.setAircraftModels(parseModelDetails(jsonObject));
             mDevelopers[i] = developer;
 
         }
+    }
+
+    private String[] parseModelDetails(JSONObject jsonObject) throws JSONException{
+        String[] aircraft = new String [jsonObject.getJSONArray("models").length()];
+        JSONArray models = jsonObject.getJSONArray("models");
+        for(int j = 0; j < models.length(); j++) {
+            JSONObject model = models.getJSONObject(j);
+
+            aircraft[j] = model.getString("model");
+        }
+        return aircraft;
     }
 }

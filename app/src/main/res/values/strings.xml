@@ -4,4 +4,5 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="list_view_error">Something went wrong!</string>
+    <string name="title_activity_checklist">Checklist</string>
 </resources>

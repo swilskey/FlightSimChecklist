@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.ChecklistActivity"
+            android:label="@string/title_activity_checklist"
+            android:parentActivityName=".ui.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samwilskey.flightsimchecklist.ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -82,7 +82,7 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-        final String aircraft = (String) getChild(groupPosition, childPosition);
+        //String aircraft = (String) getChild(groupPosition, childPosition);
         ViewHolder holder;
         if(convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.dev_child_list_item, null);
