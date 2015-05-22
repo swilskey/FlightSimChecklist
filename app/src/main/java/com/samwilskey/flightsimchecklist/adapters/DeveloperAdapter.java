@@ -22,44 +22,6 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
         mDevelopers = developers;
     }
 
-    /*
-    @Override
-    public int getCount() {
-        return mDevelopers.length;
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return mDevelopers[position];
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
-
-        if(convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.airplane_list_item, null);
-            holder = new ViewHolder();
-            holder.devLabel = (TextView) convertView.findViewById(R.id.devLabel);
-
-            convertView.setTag(holder);
-        } else {
-            holder = (ViewHolder) convertView.getTag();
-        }
-
-        Developer developer = mDevelopers[position];
-
-        holder.devLabel.setText(developer.getName());
-
-        return convertView;
-    }
-    */
-
     @Override
     public int getGroupCount() {
         return mDevelopers.length;
