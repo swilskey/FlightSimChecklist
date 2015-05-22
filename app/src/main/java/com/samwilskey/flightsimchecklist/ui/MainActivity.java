@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 
     Developer[] mDevelopers;
 
-    @InjectView(android.R.id.list) ListView mListView;
+    @InjectView(android.R.id.list) ExpandableListView mListView;
     @InjectView(android.R.id.empty) TextView mEmptyTextView;
 
     @Override
@@ -78,7 +78,14 @@ public class MainActivity extends Activity {
             JSONObject jsonObject = devs.getJSONObject(i);
             Developer developer = new Developer();
             developer.setName(jsonObject.getString("name"));
+            String[] aircraft = new String [jsonObject.getJSONArray("models").length()];
+            for(int j = 0; j < jsonObject.getJSONArray("models").length(); j++) {
+                String string = jsonObject.getJSONArray("models").getString(j);
+                aircraft[j] = string;
+            }
+            developer.setAircraftModels(aircraft);
             mDevelopers[i] = developer;
+
         }
     }
 }

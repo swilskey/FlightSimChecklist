@@ -8,12 +8,17 @@ import android.os.Parcelable;
  */
 public class Developer implements Parcelable {
     private String mName;
+    private String[] mAircraftModels;
 
     public Developer() { }
 
     private Developer(Parcel in) {
         mName = in.readString();
+        mAircraftModels = in.createStringArray();
+    }
 
+    public String getAircraftAtIndex(int index) {
+        return mAircraftModels[index];
     }
 
     @Override
@@ -24,6 +29,7 @@ public class Developer implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mName);
+        dest.writeStringArray(mAircraftModels);
     }
 
     public static final Creator<Developer> CREATOR = new Creator<Developer>() {
@@ -44,5 +50,13 @@ public class Developer implements Parcelable {
 
     public void setName(String name) {
         mName = name;
+    }
+
+    public String[] getAircraftModels() {
+        return mAircraftModels;
+    }
+
+    public void setAircraftModels(String[] aircraftModels) {
+        mAircraftModels = aircraftModels;
     }
 }
