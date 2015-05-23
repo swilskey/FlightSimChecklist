@@ -9,7 +9,7 @@
                 tools:context="com.samwilskey.flightsimchecklist.ui.ChecklistActivity">
 
     <TextView
-        android:text="@string/hello_world"
+        android:id="@+id/filename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

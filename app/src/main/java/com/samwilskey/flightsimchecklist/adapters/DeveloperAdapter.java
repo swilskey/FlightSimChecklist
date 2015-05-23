@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.samwilskey.flightsimchecklist.AircraftModel;
 import com.samwilskey.flightsimchecklist.Developer;
 import com.samwilskey.flightsimchecklist.R;
 
@@ -17,6 +18,7 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
 
     private Context mContext;
     private Developer[] mDevelopers;
+
     public DeveloperAdapter(Context context, Developer[] developers) {
         mContext = context;
         mDevelopers = developers;
@@ -39,7 +41,7 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        String[] child = mDevelopers[groupPosition].getAircraftModels();
+        AircraftModel[] child = mDevelopers[groupPosition].getAircraftModels();
         return child[childPosition];
     }
 
@@ -63,7 +65,7 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
         ViewHolder holder;
 
         if(convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.airplane_list_item, null);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.dev_list_item, null);
             holder = new ViewHolder();
             holder.devLabel = (TextView) convertView.findViewById(R.id.devLabel);
 
@@ -98,7 +100,7 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
         Developer developer = mDevelopers[groupPosition];
 
 
-        holder.aircraftLabel.setText(developer.getAircraftAtIndex(childPosition));
+        holder.aircraftLabel.setText(developer.getAircraftModel(childPosition).getName());
 
         return convertView;
     }

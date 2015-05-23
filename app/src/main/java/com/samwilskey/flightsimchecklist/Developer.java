@@ -1,48 +1,12 @@
 package com.samwilskey.flightsimchecklist;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 /**
  * Created by source41 on 5/21/2015.
  */
-public class Developer implements Parcelable {
+public class Developer {
+
     private String mName;
-    private String[] mAircraftModels;
-
-    public Developer() { }
-
-    private Developer(Parcel in) {
-        mName = in.readString();
-        mAircraftModels = in.createStringArray();
-    }
-
-    public String getAircraftAtIndex(int index) {
-        return mAircraftModels[index];
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(mName);
-        dest.writeStringArray(mAircraftModels);
-    }
-
-    public static final Creator<Developer> CREATOR = new Creator<Developer>() {
-        @Override
-        public Developer createFromParcel(Parcel source) {
-            return new Developer(source);
-        }
-
-        @Override
-        public Developer[] newArray(int size) {
-            return new Developer[size];
-        }
-    };
+    private AircraftModel[] mAircraftModels;
 
     public String getName() {
         return mName;
@@ -52,11 +16,20 @@ public class Developer implements Parcelable {
         mName = name;
     }
 
-    public String[] getAircraftModels() {
+    public AircraftModel[] getAircraftModels() {
         return mAircraftModels;
     }
 
-    public void setAircraftModels(String[] aircraftModels) {
+    public void setAircraftModels(AircraftModel[] aircraftModels) {
         mAircraftModels = aircraftModels;
+    }
+
+    public void setAircraftModel(AircraftModel aircraftModel, int position) {
+        mAircraftModels[position] = aircraftModel;
+    }
+
+    public AircraftModel getAircraftModel(int position) {
+
+        return mAircraftModels[position];
     }
 }

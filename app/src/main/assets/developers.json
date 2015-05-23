@@ -1,4 +1,5 @@
 {
+  "version": "1.0.0",
   "developers":
   [
     {
@@ -7,15 +8,15 @@
       [
         {
           "model": "Cessna 172",
-          "filename": "c172.json"
+          "filename": "c172.csv"
         },
         {
           "model": "Cessna 182",
-          "filename": "c182.json"
+          "filename": "c182.csv"
         },
         {
           "model": "Cherokee 180",
-          "filename": "c180.json"
+          "filename": "c180.csv"
         }
       ]
     },
@@ -25,11 +26,11 @@
       [
         {
           "model": "Airbus A320",
-          "filename": "a320.json"
+          "filename": "a320.csv"
         },
         {
           "model": "Airbus A318",
-          "filename": "a318.json"
+          "filename": "a318.csv"
         }
       ]
     },
@@ -39,15 +40,15 @@
       [
         {
           "model": "Boeing 737",
-          "filename": "b737.json"
+          "filename": "b737.csv"
         },
         {
           "model": "Boeing 777",
-          "filename": "b777.json"
+          "filename": "b777.csv"
         },
         {
           "model": "Boeing 747",
-          "filename": "b747.json"
+          "filename": "b747.csv"
         }
       ]
     },
@@ -57,11 +58,11 @@
       [
         {
           "model": "S550 Citation II",
-          "filename": "s550.json"
+          "filename": "s550.csv"
         },
         {
           "model": "Pilatus PC12",
-          "filename": "pc12.json"
+          "filename": "pc12.csv"
         }
       ]
     },
@@ -71,7 +72,7 @@
       [
         {
           "model": "Dash 8 - Q400",
-          "filename": "q400.json"
+          "filename": "q400.csv"
         }
       ]
     }
