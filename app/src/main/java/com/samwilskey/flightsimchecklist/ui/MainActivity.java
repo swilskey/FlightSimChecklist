@@ -52,6 +52,7 @@ public class MainActivity extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 Intent intent = new Intent(MainActivity.this, ChecklistActivity.class);
+                intent.putExtra("DEVELOPER", mDevelopers[groupPosition]);
                 startActivity(intent);
                 return true;
             }
@@ -61,7 +62,7 @@ public class MainActivity extends Activity {
 
     private String loadJSONFromAsset() throws IOException {
         String json = null;
-        InputStream inputStream = getAssets().open("airplanes.json");
+        InputStream inputStream = getAssets().open("developers.json");
         int size = inputStream.available();
         byte[] buffer = new byte[size];
         inputStream.read(buffer);
@@ -83,7 +84,6 @@ public class MainActivity extends Activity {
 
             developer.setAircraftModels(parseModelDetails(jsonObject));
             mDevelopers[i] = developer;
-
         }
     }
 
@@ -91,9 +91,9 @@ public class MainActivity extends Activity {
         String[] aircraft = new String [jsonObject.getJSONArray("models").length()];
         JSONArray models = jsonObject.getJSONArray("models");
         for(int j = 0; j < models.length(); j++) {
-            JSONObject model = models.getJSONObject(j);
+            JSONObject jsonModel = models.getJSONObject(j);
 
-            aircraft[j] = model.getString("model");
+            aircraft[j] = jsonModel.getString("model");
         }
         return aircraft;
     }

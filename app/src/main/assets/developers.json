@@ -1,0 +1,79 @@
+{
+  "developers":
+  [
+    {
+      "name": "A2A",
+      "models":
+      [
+        {
+          "model": "Cessna 172",
+          "filename": "c172.json"
+        },
+        {
+          "model": "Cessna 182",
+          "filename": "c182.json"
+        },
+        {
+          "model": "Cherokee 180",
+          "filename": "c180.json"
+        }
+      ]
+    },
+    {
+      "name": "Aerosoft",
+      "models":
+      [
+        {
+          "model": "Airbus A320",
+          "filename": "a320.json"
+        },
+        {
+          "model": "Airbus A318",
+          "filename": "a318.json"
+        }
+      ]
+    },
+    {
+      "name": "PMDG",
+      "models":
+      [
+        {
+          "model": "Boeing 737",
+          "filename": "b737.json"
+        },
+        {
+          "model": "Boeing 777",
+          "filename": "b777.json"
+        },
+        {
+          "model": "Boeing 747",
+          "filename": "b747.json"
+        }
+      ]
+    },
+    {
+      "name": "Carenado",
+      "models":
+      [
+        {
+          "model": "S550 Citation II",
+          "filename": "s550.json"
+        },
+        {
+          "model": "Pilatus PC12",
+          "filename": "pc12.json"
+        }
+      ]
+    },
+    {
+      "name": "Majestic",
+      "models":
+      [
+        {
+          "model": "Dash 8 - Q400",
+          "filename": "q400.json"
+        }
+      ]
+    }
+  ]
+}
