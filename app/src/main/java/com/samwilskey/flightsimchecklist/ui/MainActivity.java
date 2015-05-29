@@ -1,6 +1,7 @@
 package com.samwilskey.flightsimchecklist.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -52,7 +53,9 @@ public class MainActivity extends Activity {
         mListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-
+                Intent intent = new Intent(MainActivity.this, ChecklistActivity.class);
+                intent.putExtra("aircraft", mDevelopers[groupPosition].getAircraftModel(childPosition));
+                startActivity(intent);
                 return true;
             }
         });
@@ -74,7 +77,6 @@ public class MainActivity extends Activity {
     private void parseDeveloperDetails(String jsonData) throws JSONException {
         JSONObject jsonObject = new JSONObject(jsonData);
         mJSONVersion = jsonObject.getString("version");
-
         JSONArray devs = jsonObject.getJSONArray("developers");
         mDevelopers = new Developer[devs.length()];
 
@@ -95,7 +97,7 @@ public class MainActivity extends Activity {
             JSONObject jsonModel = jsonObject.getJSONObject(j);
             AircraftModel newAircraft = new AircraftModel();
             newAircraft.setName(jsonModel.getString("model"));
-            newAircraft.setChecklistFile(jsonModel.getString("filename"));
+            newAircraft.setChecklistFiles(jsonModel.getJSONArray("filenames"));
             aircraftModels[j] = newAircraft;
         }
         return aircraftModels;

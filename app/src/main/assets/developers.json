@@ -8,15 +8,60 @@
       [
         {
           "model": "Cessna 172",
-          "filename": "c172.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         },
         {
           "model": "Cessna 182",
-          "filename": "c182.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         },
         {
           "model": "Cherokee 180",
-          "filename": "c180.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         }
       ]
     },
@@ -26,11 +71,41 @@
       [
         {
           "model": "Airbus A320",
-          "filename": "a320.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         },
         {
           "model": "Airbus A318",
-          "filename": "a318.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         }
       ]
     },
@@ -40,15 +115,60 @@
       [
         {
           "model": "Boeing 737",
-          "filename": "b737.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         },
         {
           "model": "Boeing 777",
-          "filename": "b777.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         },
         {
           "model": "Boeing 747",
-          "filename": "b747.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         }
       ]
     },
@@ -58,11 +178,41 @@
       [
         {
           "model": "S550 Citation II",
-          "filename": "s550.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         },
         {
           "model": "Pilatus PC12",
-          "filename": "pc12.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         }
       ]
     },
@@ -72,7 +222,22 @@
       [
         {
           "model": "Dash 8 - Q400",
-          "filename": "q400.csv"
+          "filenames":
+          [
+            {"preflight": "a2a/c172/normal/pre_flight.csv"},
+            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
+            {"engine_start": "a2a/c172/normal/engine_start.csv"},
+            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
+            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
+            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
+            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
+            {"cruise": "a2a/c172/normal/cruise.csv"},
+            {"descent": "a2a/c172/normal/descent.csv"},
+            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
+            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
+            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
+            {"go_around": "a2a/c172/normal/go_around.csv"}
+          ]
         }
       ]
     }
