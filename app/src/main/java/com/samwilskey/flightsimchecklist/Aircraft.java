@@ -3,9 +3,7 @@ package com.samwilskey.flightsimchecklist;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -15,14 +13,12 @@ import java.util.ArrayList;
 public class Aircraft implements Parcelable {
 
     private String mName;
-    private String mChecklistFile;
     private ArrayList<String> mChecklistFiles;
 
     public Aircraft() { }
 
     private Aircraft(Parcel in) {
         mName = in.readString();
-        //mChecklistFile = in.readString();
         mChecklistFiles = in.createStringArrayList();
     }
 
@@ -34,7 +30,6 @@ public class Aircraft implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mName);
-        //dest.writeString(mChecklistFile);
         dest.writeStringList(mChecklistFiles);
     }
 
@@ -59,25 +54,11 @@ public class Aircraft implements Parcelable {
         mName = name;
     }
 
-    public String getChecklistFile() {
-        return mChecklistFile;
-    }
-
-    public void setChecklistFile(String checklistFile) {
-        mChecklistFile = checklistFile;
-    }
-
     public ArrayList<String> getChecklistFiles() {
         return mChecklistFiles;
     }
 
-    public void setChecklistFiles(JSONArray checklistFiles) throws JSONException {
-        mChecklistFiles = new ArrayList<String>();
-        if (checklistFiles != null) {
-            for (int i = 0; i < checklistFiles.length(); i++) {
-                JSONObject obj = checklistFiles.getJSONObject(i);
-                mChecklistFiles.add(checklistFiles.getString(i));
-            }
-        }
+    public void setChecklistFiles(ArrayList checklistFiles) throws JSONException {
+        mChecklistFiles = checklistFiles;
     }
 }

@@ -18,6 +18,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -53,7 +54,7 @@ public class MainActivity extends Activity {
         mListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                Intent intent = new Intent(MainActivity.this, ChecklistActivity.class);
+                Intent intent = new Intent(MainActivity.this, ChecklistSelectActivity.class);
                 intent.putExtra("aircraft", mDevelopers[groupPosition].getAircraftModel(childPosition));
                 startActivity(intent);
                 return true;
@@ -85,19 +86,22 @@ public class MainActivity extends Activity {
             JSONObject dev = devs.getJSONObject(i);
             Developer developer = new Developer();
             developer.setName(dev.getString("name"));
-            developer.setAircrafts(getModelDetails(dev.getJSONArray("models")));
+            developer.setAircrafts(getAircraftDetails(dev.getJSONArray("models")));
             mDevelopers[i] = developer;
         }
     }
 
-    private Aircraft[] getModelDetails(JSONArray jsonObject) throws JSONException{
+    private Aircraft[] getAircraftDetails(JSONArray jsonObject) throws JSONException{
         Aircraft[] aircrafts = new Aircraft[jsonObject.length()];
 
         for(int j = 0; j < jsonObject.length(); j++) {
             JSONObject jsonModel = jsonObject.getJSONObject(j);
             Aircraft newAircraft = new Aircraft();
+            ArrayList<String> checklists = new ArrayList<>();
             newAircraft.setName(jsonModel.getString("model"));
-            newAircraft.setChecklistFiles(jsonModel.getJSONArray("filenames"));
+            checklists.add(jsonModel.getString("normalChecklist"));
+            checklists.add(jsonModel.getString("emergencyChecklist"));
+            newAircraft.setChecklistFiles(checklists);
             aircrafts[j] = newAircraft;
         }
         return aircrafts;

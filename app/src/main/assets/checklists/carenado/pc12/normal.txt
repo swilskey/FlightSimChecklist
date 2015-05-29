@@ -1,0 +1,150 @@
+Pre Flight
+POH and Documents,AVAILABLE
+Control Wheel Lock,REMOVE
+Ignition Switch,OFF
+Avionics and Electrical Switches,OFF
+Pitot Tube Cover,REMOVE
+Airplane Weight and Balance,CHECKED
+MASTER Switch,ON
+Flaps,DOWN
+Fuel Quantity,CHECK
+Static Pressure Alt. Source,OFF
+Annunciator Panel Switch,TST AND HOLD
+Annunciator Panel Switch,RELEASE
+Fuel Selector Valve,BOTH
+Fuel Shutoff Valve,ON (Push full in)
+Pitot Heat,ON (Test for warmth 30sec)
+Pitot Heat,OFF
+Lights,CHECK IF NEEDED
+MASTER Switch,OFF
+Hobbs and Tach,CHECK
+
+Before Engine Start
+Preflight,COMPLETE
+Passenger Briefing,COMPLETE
+Seats, Belts and Harnesses,ADJUSTED & LOCKED
+Fuel Selector,BOTH
+Fuel Shutoff Valve,ON (Push full in)
+Avionics and Electrical Switches,OFF
+Brakes,TEST & SET
+Circuit Breakers,CHECK
+
+Engine Start
+Throttle,OPEN (1/4in)
+Mixture,IDLE CUT OFF
+MASTER Switch,ON
+Auxilliary Fuel Pump,ON
+Propeller Area,CLEAR
+Mixture,ADVANCE THEN IDLE CUT OFF
+Auxilliary Fuel Pump,OFF
+Beacon Light (NAV if required),ON
+Ignition,START
+Mixture,ADVANCE
+Oil Pressure,CHECK
+NAV Lights,ON (as required)
+Avionics Master Switch,ON
+Radios,ON
+Transponder,STBY
+Flaps,UP
+ATIS,CHECK
+
+Before Takeoff
+Parking Brakes,SET
+Seats, Belts and Harnesses,CHECK
+Doors,CLOSED & LATCHED
+Flight Controls,FREE & CLEAR
+Flight Instruments,CHECK & SET
+Fuel Quantity,CHECK
+Fuel Selector,CHECK BOTH
+Mixture,RICH
+Elevator Trim,SET FOR TAKEOFF
+Throttle,1800 RPM
+Magnetos Switch,CHECK
+Suction Gage,CHECK
+Ammeter and Low Voltage,CHECK
+Verify IDLE engine operation,575 to 625 RPM
+Throttle,1000 RPM OR LESS
+Throttle Friction Lock,SET
+Strobe Lights,AS DESIRED
+Radios and Avionics,SET
+Autopilot,OFF
+Emergency Procedures,REVIEWED
+Departure Plans,REVIEWED
+Takeoff Checklist,REVIEW
+Parking Brakes,RELEASE
+
+Normal Takeoff
+Flaps,UP
+Transponder,ON/ALT
+Landing Light,ON
+Time,NOTE
+Heading Indicator,CHECK W/RWY
+Mixture,RICH
+Engine Instruments,CHECK
+Rotate,55 KTS
+Climb Speed,70 - 80 KTS
+
+Shortfield Takeoff
+Flaps,10 DEGREES
+Transponder,ON/ALT
+Landing Light,ON
+Time,NOTE
+Heading Indicator,CHECK W/RWY
+Brakes,APPLY
+Throttle,FULL OPEN
+Mixture,RICH
+Engine Instruments,CHECK
+Brakes,RELEASE
+Rotate,56 KTS (Vr)
+Climb Speed,62 KTS (Vx)
+Flaps,RETRACT AFTER POS RATE
+
+Climb
+Airspeed,75 - 85 KTS
+Throttle,FULL OPEN
+Mixture,RICH (lean above 3000')
+
+Cruise
+Power,2000 - 2600 RPM
+Elevator Trim,ADJUST
+Mixture,LEAN AS NECESSARY
+Landing Lights,OFF
+Heading Indicator,CHECK W/COMPASS
+
+Descent
+Throttle,AS DESIRED
+Mixture,ADJUST FOR ALTITUDE
+Fuel Selector,BOTH
+
+Before Landing
+Seats, Belts and Harnesses,CHECK
+Fuel Selector,BOTH
+Mixture,RICH or AS NEEDED
+Landing Light,ON
+Autopilot,OFF
+Landing Checklist,REVIEW
+
+Normal Landing
+Downwind,85 KTS
+Flaps Downwind,10 DEG
+Base,75 KTS
+Flaps Base,20 DEG
+Final,70 KTS
+Flaps Final,30 - 40 DEG
+
+Shortfield Landing
+Airspeed,65 KTS on FINAL
+Flaps,FULL
+Airspeed,62 KTS on SHORT FINAL
+Power,REDUCE TO IDLE
+Touchdown,MAIN GEAR FIRST
+Brakes,AS NEEDED
+Flaps,RETRACT
+Controls,HOLD FULL AFT
+
+Go Around
+Pitch,UP
+Throttle,FULL OPEN
+Flaps,RETRACT TO 20 DEG
+Climb Speed,60 KTS
+Flaps,RETRACT

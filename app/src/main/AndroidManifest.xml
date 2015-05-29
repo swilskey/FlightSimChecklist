@@ -24,6 +24,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.samwilskey.flightsimchecklist.ui.MainActivity" />
         </activity>
+        <activity
+            android:name=".ui.ChecklistSelectActivity"
+            android:label="@string/title_activity_checklist"
+            android:parentActivityName=".ui.ChecklistActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samwilskey.flightsimchecklist.ui.ChecklistSelectActivity" />
+        </activity>
     </application>
 
 </manifest>
+

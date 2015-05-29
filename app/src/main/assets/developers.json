@@ -8,60 +8,18 @@
       [
         {
           "model": "Cessna 172",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         },
         {
           "model": "Cessna 182",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         },
         {
           "model": "Cherokee 180",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         }
       ]
     },
@@ -71,41 +29,13 @@
       [
         {
           "model": "Airbus A320",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         },
         {
           "model": "Airbus A318",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         }
       ]
     },
@@ -115,60 +45,18 @@
       [
         {
           "model": "Boeing 737",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         },
         {
           "model": "Boeing 777",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         },
         {
           "model": "Boeing 747",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         }
       ]
     },
@@ -178,41 +66,13 @@
       [
         {
           "model": "S550 Citation II",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         },
         {
           "model": "Pilatus PC12",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         }
       ]
     },
@@ -222,22 +82,8 @@
       [
         {
           "model": "Dash 8 - Q400",
-          "filenames":
-          [
-            {"preflight": "a2a/c172/normal/pre_flight.csv"},
-            {"pre_engine_start": "a2a/c172/normal/pre_engine_start.csv"},
-            {"engine_start": "a2a/c172/normal/engine_start.csv"},
-            {"before_takeoff": "a2a/c172/normal/before_takeoff.csv"},
-            {"normal_takeoff": "a2a/c172/normal/normal_takeoff.csv"},
-            {"shortfield_takeoff": "a2a/c172/normal/shortfield_takeoff.csv"},
-            {"enroute_climb": "a2a/c172/normal/enroute_climb.csv"},
-            {"cruise": "a2a/c172/normal/cruise.csv"},
-            {"descent": "a2a/c172/normal/descent.csv"},
-            {"pre_landing": "a2a/c172/normal/pre_landing.csv"},
-            {"normal_landing": "a2a/c172/normal/normal_landing.csv"},
-            {"shortfield_landing": "a2a/c172/normal/shortfield_landing.csv"},
-            {"go_around": "a2a/c172/normal/go_around.csv"}
-          ]
+          "normalChecklist": "a2a/c172/normal.txt",
+          "emergencyChecklist": "a2a/c172/emergency.txt"
         }
       ]
     }
