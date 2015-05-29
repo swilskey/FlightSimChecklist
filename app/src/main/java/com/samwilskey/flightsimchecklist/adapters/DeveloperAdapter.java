@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import com.samwilskey.flightsimchecklist.AircraftModel;
+import com.samwilskey.flightsimchecklist.Aircraft;
 import com.samwilskey.flightsimchecklist.Developer;
 import com.samwilskey.flightsimchecklist.R;
 
@@ -31,7 +31,7 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return mDevelopers[groupPosition].getAircraftModels().length;
+        return mDevelopers[groupPosition].getAircrafts().length;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        AircraftModel[] child = mDevelopers[groupPosition].getAircraftModels();
+        Aircraft[] child = mDevelopers[groupPosition].getAircrafts();
         return child[childPosition];
     }
 

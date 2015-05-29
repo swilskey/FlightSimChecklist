@@ -12,15 +12,15 @@ import java.util.ArrayList;
 /**
  * Created by source41 on 5/22/2015.
  */
-public class AircraftModel implements Parcelable {
+public class Aircraft implements Parcelable {
 
     private String mName;
     private String mChecklistFile;
     private ArrayList<String> mChecklistFiles;
 
-    public AircraftModel() { }
+    public Aircraft() { }
 
-    private AircraftModel(Parcel in) {
+    private Aircraft(Parcel in) {
         mName = in.readString();
         //mChecklistFile = in.readString();
         mChecklistFiles = in.createStringArrayList();
@@ -38,16 +38,16 @@ public class AircraftModel implements Parcelable {
         dest.writeStringList(mChecklistFiles);
     }
 
-    public static final Creator<AircraftModel> CREATOR = new Creator<AircraftModel>() {
+    public static final Creator<Aircraft> CREATOR = new Creator<Aircraft>() {
 
         @Override
-        public AircraftModel createFromParcel(Parcel source) {
-            return new AircraftModel(source);
+        public Aircraft createFromParcel(Parcel source) {
+            return new Aircraft(source);
         }
 
         @Override
-        public AircraftModel[] newArray(int size) {
-            return new AircraftModel[size];
+        public Aircraft[] newArray(int size) {
+            return new Aircraft[size];
         }
     };
 

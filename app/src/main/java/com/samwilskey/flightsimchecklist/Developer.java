@@ -6,7 +6,7 @@ package com.samwilskey.flightsimchecklist;
 public class Developer {
 
     private String mName;
-    private AircraftModel[] mAircraftModels;
+    private Aircraft[] mAircrafts;
 
     public String getName() {
         return mName;
@@ -16,20 +16,20 @@ public class Developer {
         mName = name;
     }
 
-    public AircraftModel[] getAircraftModels() {
-        return mAircraftModels;
+    public Aircraft[] getAircrafts() {
+        return mAircrafts;
     }
 
-    public void setAircraftModels(AircraftModel[] aircraftModels) {
-        mAircraftModels = aircraftModels;
+    public void setAircrafts(Aircraft[] aircrafts) {
+        mAircrafts = aircrafts;
     }
 
-    public void setAircraftModel(AircraftModel aircraftModel, int position) {
-        mAircraftModels[position] = aircraftModel;
+    public void setAircraftModel(Aircraft aircraft, int position) {
+        mAircrafts[position] = aircraft;
     }
 
-    public AircraftModel getAircraftModel(int position) {
+    public Aircraft getAircraftModel(int position) {
 
-        return mAircraftModels[position];
+        return mAircrafts[position];
     }
 }

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.samwilskey.flightsimchecklist.AircraftModel;
+import com.samwilskey.flightsimchecklist.Aircraft;
 import com.samwilskey.flightsimchecklist.Developer;
 import com.samwilskey.flightsimchecklist.R;
 import com.samwilskey.flightsimchecklist.adapters.DeveloperAdapter;
@@ -85,21 +85,21 @@ public class MainActivity extends Activity {
             JSONObject dev = devs.getJSONObject(i);
             Developer developer = new Developer();
             developer.setName(dev.getString("name"));
-            developer.setAircraftModels(getModelDetails(dev.getJSONArray("models")));
+            developer.setAircrafts(getModelDetails(dev.getJSONArray("models")));
             mDevelopers[i] = developer;
         }
     }
 
-    private AircraftModel[] getModelDetails(JSONArray jsonObject) throws JSONException{
-        AircraftModel[] aircraftModels = new AircraftModel[jsonObject.length()];
+    private Aircraft[] getModelDetails(JSONArray jsonObject) throws JSONException{
+        Aircraft[] aircrafts = new Aircraft[jsonObject.length()];
 
         for(int j = 0; j < jsonObject.length(); j++) {
             JSONObject jsonModel = jsonObject.getJSONObject(j);
-            AircraftModel newAircraft = new AircraftModel();
+            Aircraft newAircraft = new Aircraft();
             newAircraft.setName(jsonModel.getString("model"));
             newAircraft.setChecklistFiles(jsonModel.getJSONArray("filenames"));
-            aircraftModels[j] = newAircraft;
+            aircrafts[j] = newAircraft;
         }
-        return aircraftModels;
+        return aircrafts;
     }
 }

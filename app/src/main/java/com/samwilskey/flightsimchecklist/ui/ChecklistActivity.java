@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.samwilskey.flightsimchecklist.AircraftModel;
+import com.samwilskey.flightsimchecklist.Aircraft;
 import com.samwilskey.flightsimchecklist.R;
 
 import butterknife.ButterKnife;
@@ -15,7 +15,7 @@ public class ChecklistActivity extends Activity {
 
     public static final String TAG = ChecklistActivity.class.getSimpleName();
 
-    private AircraftModel mAircraft;
+    private Aircraft mAircraft;
 
     @InjectView(android.R.id.list) ListView mListView;
 
