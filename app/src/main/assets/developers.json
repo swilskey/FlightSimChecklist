@@ -8,18 +8,30 @@
       [
         {
           "model": "Cessna 172",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         },
         {
           "model": "Cessna 182",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         },
         {
           "model": "Cherokee 180",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         }
       ]
     },
@@ -29,13 +41,21 @@
       [
         {
           "model": "Airbus A320",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         },
         {
           "model": "Airbus A318",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         }
       ]
     },
@@ -45,18 +65,30 @@
       [
         {
           "model": "Boeing 737",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         },
         {
           "model": "Boeing 777",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         },
         {
           "model": "Boeing 747",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         }
       ]
     },
@@ -66,13 +98,21 @@
       [
         {
           "model": "S550 Citation II",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         },
         {
           "model": "Pilatus PC12",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         }
       ]
     },
@@ -82,8 +122,12 @@
       [
         {
           "model": "Dash 8 - Q400",
-          "normalChecklist": "a2a/c172/normal.txt",
-          "emergencyChecklist": "a2a/c172/emergency.txt"
+          "files": [
+            "checklists/a2a/c172/normal_sections.json",
+            "checklists/a2a/c172/emergency_sections.json",
+            "checklists/a2a/c172/normal.json",
+            "checklists/a2a/c172/emergency.json"
+          ]
         }
       ]
     }

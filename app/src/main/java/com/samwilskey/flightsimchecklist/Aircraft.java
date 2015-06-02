@@ -3,23 +3,19 @@ package com.samwilskey.flightsimchecklist;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import org.json.JSONException;
-
-import java.util.ArrayList;
-
 /**
  * Created by source41 on 5/22/2015.
  */
 public class Aircraft implements Parcelable {
 
     private String mName;
-    private ArrayList<String> mChecklistFiles;
+    private Checklist[] mChecklists;
 
     public Aircraft() { }
 
     private Aircraft(Parcel in) {
         mName = in.readString();
-        mChecklistFiles = in.createStringArrayList();
+        mChecklists = in.createTypedArray(Checklist.CREATOR);
     }
 
     @Override
@@ -30,7 +26,7 @@ public class Aircraft implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mName);
-        dest.writeStringList(mChecklistFiles);
+        dest.writeTypedArray(mChecklists, flags);
     }
 
     public static final Creator<Aircraft> CREATOR = new Creator<Aircraft>() {
@@ -54,11 +50,11 @@ public class Aircraft implements Parcelable {
         mName = name;
     }
 
-    public ArrayList<String> getChecklistFiles() {
-        return mChecklistFiles;
+    public Checklist[] getChecklists() {
+        return mChecklists;
     }
 
-    public void setChecklistFiles(ArrayList checklistFiles) throws JSONException {
-        mChecklistFiles = checklistFiles;
+    public void setChecklists(Checklist[] checklists) {
+        mChecklists = checklists;
     }
 }

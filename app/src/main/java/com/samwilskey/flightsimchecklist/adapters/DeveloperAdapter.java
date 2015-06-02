@@ -75,16 +75,13 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Developer developer = mDevelopers[groupPosition];
-
-        holder.devLabel.setText(developer.getName());
+        holder.devLabel.setText(mDevelopers[groupPosition].getName());
 
         return convertView;
     }
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-        //String aircraft = (String) getChild(groupPosition, childPosition);
         ViewHolder holder;
         if(convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.dev_child_list_item, null);
@@ -97,10 +94,7 @@ public class DeveloperAdapter extends BaseExpandableListAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Developer developer = mDevelopers[groupPosition];
-
-
-        holder.aircraftLabel.setText(developer.getAircraftModel(childPosition).getName());
+        holder.aircraftLabel.setText(mDevelopers[groupPosition].getAircraftModel(childPosition).getName());
 
         return convertView;
     }

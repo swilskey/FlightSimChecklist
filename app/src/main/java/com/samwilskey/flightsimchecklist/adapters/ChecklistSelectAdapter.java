@@ -7,32 +7,44 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.samwilskey.flightsimchecklist.Aircraft;
 import com.samwilskey.flightsimchecklist.Checklist;
 import com.samwilskey.flightsimchecklist.R;
 
 /**
- * Created by source41 on 6/1/2015.
+ * Created by source41 on 5/29/2015.
  */
-public class ChecklistAdapter extends BaseAdapter {
+public class ChecklistSelectAdapter extends BaseAdapter {
 
     private Context mContext;
+    private Aircraft mAircraft;
     private Checklist mChecklist;
-    private int mSection;
-    public ChecklistAdapter(Context context, Checklist checklist, String section) {
+
+    public ChecklistSelectAdapter(Context context, Aircraft aircraft) {
+        mContext = context;
+        mAircraft = aircraft;
+    }
+
+    public ChecklistSelectAdapter(Context context, Checklist checklist) {
         mContext = context;
         mChecklist = checklist;
-        //mSection = section;
     }
 
 
     @Override
     public int getCount() {
-        return mChecklist.getChecklistItems().get(mSection).length;
+        if(mAircraft == null) {
+            return mChecklist.getSections().length;
+        }
+        return mAircraft.getChecklists().length;
     }
 
     @Override
     public Object getItem(int position) {
-        return mChecklist.getChecklistItems().get(mSection)[position];
+        if(mAircraft == null) {
+            return mChecklist.getSections()[position];
+        }
+        return mAircraft.getChecklists()[position];
     }
 
     @Override
@@ -56,7 +68,12 @@ public class ChecklistAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.devLabel.setText(mChecklist.getChecklistItems().get(mChecklist)[position]);
+        if(mAircraft == null) {
+            holder.devLabel.setText(mChecklist.getSections()[position]);
+        }
+        else {
+            holder.devLabel.setText(mAircraft.getChecklists()[position].getName());
+        }
 
         return convertView;
     }
