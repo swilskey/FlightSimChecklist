@@ -1,4 +1,4 @@
-package com.samwilskey.flightsimchecklist;
+package com.samwilskey.flightsimchecklist.model;
 
 /**
  * Created by source41 on 5/21/2015.

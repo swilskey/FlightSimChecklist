@@ -4,20 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.samwilskey.flightsimchecklist.Aircraft;
-import com.samwilskey.flightsimchecklist.Checklist;
-import com.samwilskey.flightsimchecklist.JsonHelper;
 import com.samwilskey.flightsimchecklist.R;
 import com.samwilskey.flightsimchecklist.adapters.ChecklistSelectAdapter;
-
-import org.json.JSONException;
-
-import java.io.IOException;
+import com.samwilskey.flightsimchecklist.helpers.JsonHelper;
+import com.samwilskey.flightsimchecklist.model.Aircraft;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -27,7 +20,6 @@ public class ChecklistSelectActivity extends Activity {
     public static final String TAG = ChecklistSelectActivity.class.getSimpleName();
 
     private Aircraft mAircraft;
-    private Checklist mChecklist;
     private JsonHelper mJsonHelper;
 
     @InjectView(android.R.id.list)
@@ -46,21 +38,19 @@ public class ChecklistSelectActivity extends Activity {
 
         mJsonHelper = new JsonHelper(this);
 
+        /*
         try {
-            mChecklist = mJsonHelper.parseChecklistSections(
-                    mJsonHelper.loadJSONFromAsset(mAircraft.getChecklists()[0].getFile()));
-            mChecklist = mJsonHelper.parseChecklistItems(
-                    mJsonHelper.loadJSONFromAsset(mAircraft.getChecklists()[2].getFile()),mChecklist);
+            String jsonData = mJsonHelper.loadJSONFromAsset(mAircraft.getChecklistMap().get("Normal").getSectionFile());
+            mAircraft.getChecklistMap().get("Normal").setSections(mJsonHelper.parseChecklistSections(jsonData));
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
-        mAircraft.getChecklists()[2] = mChecklist;
-
-        ChecklistSelectAdapter adapter = new ChecklistSelectAdapter(this, mChecklist);
+*/
+        ChecklistSelectAdapter adapter = new ChecklistSelectAdapter(this, mAircraft);
         mListView.setAdapter(adapter);
         mListView.setEmptyView(mEmptyList);
 
-
+/*
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -69,7 +59,7 @@ public class ChecklistSelectActivity extends Activity {
                 startActivity(intent);
             }
         });
-
+*/
     }
 
     @Override

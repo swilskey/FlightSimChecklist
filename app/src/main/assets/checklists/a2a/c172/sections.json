@@ -1,0 +1,12 @@
+{
+  "Normal": [
+    "Pre-Flight",
+    "Before Engine Start",
+    "Engine Start"
+  ],
+  "Emergency": [
+    "Fire",
+    "Engine Fire",
+    "Engine Quits"
+  ]
+}

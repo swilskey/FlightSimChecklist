@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.samwilskey.flightsimchecklist.Aircraft;
-import com.samwilskey.flightsimchecklist.Checklist;
+import com.samwilskey.flightsimchecklist.model.Aircraft;
+import com.samwilskey.flightsimchecklist.model.Checklist;
 import com.samwilskey.flightsimchecklist.R;
 
 /**
@@ -36,7 +36,7 @@ public class ChecklistSelectAdapter extends BaseAdapter {
         if(mAircraft == null) {
             return mChecklist.getSections().length;
         }
-        return mAircraft.getChecklists().length;
+        return mAircraft.getChecklistMap().size();
     }
 
     @Override
@@ -44,7 +44,7 @@ public class ChecklistSelectAdapter extends BaseAdapter {
         if(mAircraft == null) {
             return mChecklist.getSections()[position];
         }
-        return mAircraft.getChecklists()[position];
+        return mAircraft.getChecklistMap().get(mAircraft.getKeys().get(position));
     }
 
     @Override
@@ -72,7 +72,7 @@ public class ChecklistSelectAdapter extends BaseAdapter {
             holder.devLabel.setText(mChecklist.getSections()[position]);
         }
         else {
-            holder.devLabel.setText(mAircraft.getChecklists()[position].getName());
+            holder.devLabel.setText(mAircraft.getChecklistMap().get(mAircraft.getKeys().get(position)).getName());
         }
 
         return convertView;

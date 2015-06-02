@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import com.samwilskey.flightsimchecklist.Aircraft;
-import com.samwilskey.flightsimchecklist.Developer;
+import com.samwilskey.flightsimchecklist.model.Aircraft;
+import com.samwilskey.flightsimchecklist.model.Developer;
 import com.samwilskey.flightsimchecklist.R;
 
 /**

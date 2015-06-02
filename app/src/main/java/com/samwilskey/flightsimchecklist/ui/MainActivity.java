@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.samwilskey.flightsimchecklist.Developer;
-import com.samwilskey.flightsimchecklist.JsonHelper;
+import com.samwilskey.flightsimchecklist.model.Developer;
+import com.samwilskey.flightsimchecklist.helpers.JsonHelper;
 import com.samwilskey.flightsimchecklist.R;
 import com.samwilskey.flightsimchecklist.adapters.DeveloperAdapter;
 

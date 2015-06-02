@@ -1,4 +1,4 @@
-package com.samwilskey.flightsimchecklist;
+package com.samwilskey.flightsimchecklist.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -15,6 +15,7 @@ public class Checklist implements Parcelable{
 
     private String mName;
     private String mFile;
+    private String mSectionFile;
     private String[] mSections;
     private Map<String, String[]> mChecklistItems;
 
@@ -25,7 +26,7 @@ public class Checklist implements Parcelable{
     public Checklist(Parcel in) {
         mName = in.readString();
         mFile = in.readString();
-        mSections = in.createStringArray();
+        mSectionFile = in.readString();
 
         int size = in.readInt();
         mChecklistItems = new ArrayMap<>();
@@ -34,14 +35,6 @@ public class Checklist implements Parcelable{
             String[] value = in.createStringArray();
             mChecklistItems.put(key,value);
         }
-    }
-
-    public String[] getSections() {
-        return mSections;
-    }
-
-    public void setSections(String[] sections) {
-        mSections = sections;
     }
 
     public String getName() {
@@ -68,6 +61,22 @@ public class Checklist implements Parcelable{
         mChecklistItems = checklistItems;
     }
 
+    public String getSectionFile() {
+        return mSectionFile;
+    }
+
+    public void setSectionFile(String sectionFile) {
+        mSectionFile = sectionFile;
+    }
+
+    public void setSections(String[] sections) {
+        mSections = sections;
+    }
+
+    public String[] getSections() {
+        return mSections;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -77,6 +86,7 @@ public class Checklist implements Parcelable{
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mName);
         dest.writeString(mFile);
+        dest.writeString(mSectionFile);
         dest.writeStringArray(mSections);
         dest.writeInt(mChecklistItems.size());
         for(Map.Entry<String, String[]> entry : mChecklistItems.entrySet()) {

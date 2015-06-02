@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ListView;
 
-import com.samwilskey.flightsimchecklist.Checklist;
+import com.samwilskey.flightsimchecklist.model.Checklist;
 import com.samwilskey.flightsimchecklist.R;
 import com.samwilskey.flightsimchecklist.adapters.ChecklistAdapter;
 
