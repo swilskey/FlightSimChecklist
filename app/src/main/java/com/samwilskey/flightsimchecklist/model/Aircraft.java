@@ -19,10 +19,10 @@ public class Aircraft implements Parcelable {
     public Aircraft() { }
 
     private Aircraft(Parcel in) {
+        mChecklistMap = new ArrayMap<>();
         mName = in.readString();
         mKeys = in.createStringArrayList();
         int size = in.readInt();
-        mChecklistMap = new ArrayMap<>();
         for(int i = 0; i < size; i++) {
             String key = in.readString();
             Checklist value = in.readParcelable(Checklist.class.getClassLoader());

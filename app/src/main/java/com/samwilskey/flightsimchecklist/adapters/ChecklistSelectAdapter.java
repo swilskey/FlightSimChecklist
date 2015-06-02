@@ -7,9 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.samwilskey.flightsimchecklist.model.Aircraft;
-import com.samwilskey.flightsimchecklist.model.Checklist;
 import com.samwilskey.flightsimchecklist.R;
+import com.samwilskey.flightsimchecklist.model.Aircraft;
 
 /**
  * Created by source41 on 5/29/2015.
@@ -18,33 +17,20 @@ public class ChecklistSelectAdapter extends BaseAdapter {
 
     private Context mContext;
     private Aircraft mAircraft;
-    private Checklist mChecklist;
 
     public ChecklistSelectAdapter(Context context, Aircraft aircraft) {
         mContext = context;
         mAircraft = aircraft;
     }
 
-    public ChecklistSelectAdapter(Context context, Checklist checklist) {
-        mContext = context;
-        mChecklist = checklist;
-    }
-
-
     @Override
     public int getCount() {
-        if(mAircraft == null) {
-            return mChecklist.getSections().length;
-        }
         return mAircraft.getChecklistMap().size();
     }
 
     @Override
     public Object getItem(int position) {
-        if(mAircraft == null) {
-            return mChecklist.getSections()[position];
-        }
-        return mAircraft.getChecklistMap().get(mAircraft.getKeys().get(position));
+        return mAircraft.getChecklistMap().get(mAircraft.getChecklistMap().get(mAircraft.getKeys().get(position)));
     }
 
     @Override
@@ -68,12 +54,7 @@ public class ChecklistSelectAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        if(mAircraft == null) {
-            holder.devLabel.setText(mChecklist.getSections()[position]);
-        }
-        else {
-            holder.devLabel.setText(mAircraft.getChecklistMap().get(mAircraft.getKeys().get(position)).getName());
-        }
+        holder.devLabel.setText(mAircraft.getChecklistMap().get(mAircraft.getKeys().get(position)).getName());
 
         return convertView;
     }

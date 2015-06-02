@@ -91,18 +91,13 @@ public class JsonHelper {
         return aircrafts;
     }
 
-    public String[] parseChecklistSections(String jsonData) throws JSONException {
+    public String[] parseChecklistSections(String jsonData, String key) throws JSONException {
         JSONObject jsonObject = new JSONObject(jsonData);
-        Iterator keys = jsonObject.keys();
-        String [] checklistSections = null;
-        while(keys.hasNext()) {
-            String key = (String) keys.next();
-            JSONArray sections = jsonObject.getJSONArray(key);
-            checklistSections = new String[sections.length()];
-            for(int i = 0; i < sections.length(); i++) {
-                checklistSections[i] = sections.getString(i);
-            }
-        }
+        JSONArray jsonArray = jsonObject.getJSONArray(key);
+        String[] checklistSections = new String[jsonArray.length()];
+
+        for(int i = 0; i < jsonArray.length(); i++)
+            checklistSections[i] = jsonArray.getString(i);
 
         return checklistSections;
     }

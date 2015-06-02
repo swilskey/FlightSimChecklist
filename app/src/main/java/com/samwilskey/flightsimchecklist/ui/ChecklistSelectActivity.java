@@ -12,6 +12,10 @@ import com.samwilskey.flightsimchecklist.adapters.ChecklistSelectAdapter;
 import com.samwilskey.flightsimchecklist.helpers.JsonHelper;
 import com.samwilskey.flightsimchecklist.model.Aircraft;
 
+import org.json.JSONException;
+
+import java.io.IOException;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -38,14 +42,18 @@ public class ChecklistSelectActivity extends Activity {
 
         mJsonHelper = new JsonHelper(this);
 
-        /*
+
         try {
-            String jsonData = mJsonHelper.loadJSONFromAsset(mAircraft.getChecklistMap().get("Normal").getSectionFile());
-            mAircraft.getChecklistMap().get("Normal").setSections(mJsonHelper.parseChecklistSections(jsonData));
+            for(int i = 0; i < mAircraft.getChecklistMap().size(); i++) {
+                String key = mAircraft.getKeys().get(i);
+                String fileName = mAircraft.getChecklistMap().get(key).getSectionFile();
+                String jsonData = mJsonHelper.loadJSONFromAsset(fileName);
+                mAircraft.getChecklistMap().get(key).setSections(mJsonHelper.parseChecklistSections(jsonData, key));
+            }
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
-*/
+
         ChecklistSelectAdapter adapter = new ChecklistSelectAdapter(this, mAircraft);
         mListView.setAdapter(adapter);
         mListView.setEmptyView(mEmptyList);

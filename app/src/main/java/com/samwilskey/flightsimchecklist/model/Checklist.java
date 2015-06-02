@@ -27,7 +27,7 @@ public class Checklist implements Parcelable{
         mName = in.readString();
         mFile = in.readString();
         mSectionFile = in.readString();
-
+        mSections = in.createStringArray();
         int size = in.readInt();
         mChecklistItems = new ArrayMap<>();
         for(int i = 0; i < size; i++) {
