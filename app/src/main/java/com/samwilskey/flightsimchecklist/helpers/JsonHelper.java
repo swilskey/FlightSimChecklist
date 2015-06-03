@@ -101,12 +101,11 @@ public class JsonHelper {
 
         return checklistSections;
     }
-/*
-    public Checklist parseChecklistItems(String jsonData, Checklist checklist) throws JSONException {
+    public Map<String, String[]> parseChecklistItems(String jsonData, Checklist checklist) throws JSONException {
         JSONObject jsonObject = new JSONObject(jsonData);
         Map<String, String[]> checklistItems = new ArrayMap<String, String[]>();
 
-        for(int i = 0; i < checklist.g; i++) {
+        for(int i = 0; i < checklist.getSections().length; i++) {
 
             String key = checklist.getSections()[i];
             JSONArray items = jsonObject.getJSONArray(key);
@@ -117,9 +116,7 @@ public class JsonHelper {
             checklistItems.put(key, array);
         }
 
-        checklist.setChecklistItems(checklistItems);
-
-        return checklist;
+        return checklistItems;
     }
-*/
+
 }

@@ -4,13 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.samwilskey.flightsimchecklist.R;
 import com.samwilskey.flightsimchecklist.adapters.ChecklistSelectAdapter;
 import com.samwilskey.flightsimchecklist.helpers.JsonHelper;
 import com.samwilskey.flightsimchecklist.model.Aircraft;
+import com.samwilskey.flightsimchecklist.model.Checklist;
 
 import org.json.JSONException;
 
@@ -27,7 +29,7 @@ public class ChecklistSelectActivity extends Activity {
     private JsonHelper mJsonHelper;
 
     @InjectView(android.R.id.list)
-    ListView mListView;
+    ExpandableListView mListView;
     @InjectView(android.R.id.empty)
     TextView mEmptyList;
 
@@ -42,13 +44,18 @@ public class ChecklistSelectActivity extends Activity {
 
         mJsonHelper = new JsonHelper(this);
 
-
         try {
             for(int i = 0; i < mAircraft.getChecklistMap().size(); i++) {
                 String key = mAircraft.getKeys().get(i);
-                String fileName = mAircraft.getChecklistMap().get(key).getSectionFile();
-                String jsonData = mJsonHelper.loadJSONFromAsset(fileName);
-                mAircraft.getChecklistMap().get(key).setSections(mJsonHelper.parseChecklistSections(jsonData, key));
+                Checklist checklist = mAircraft.getChecklistMap().get(key);
+                String fileName = checklist.getSectionFile();
+                String sectionData = mJsonHelper.loadJSONFromAsset(fileName);
+                checklist.setSections(mJsonHelper.parseChecklistSections(sectionData, key));
+
+                String checklistFile = checklist.getFile();
+                String checklistData = mJsonHelper.loadJSONFromAsset(checklistFile);
+                checklist.setChecklistItems(mJsonHelper.parseChecklistItems(checklistData, checklist));
+
             }
         } catch (IOException | JSONException e) {
             e.printStackTrace();
@@ -58,16 +65,20 @@ public class ChecklistSelectActivity extends Activity {
         mListView.setAdapter(adapter);
         mListView.setEmptyView(mEmptyList);
 
-/*
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                String key = mAircraft.getKeys().get(groupPosition);
+
+                Checklist checklist = mAircraft.getChecklistMap().get(key);
+
                 Intent intent = new Intent(ChecklistSelectActivity.this, ChecklistActivity.class);
-                intent.putExtra("checklist", mChecklist);
+                intent.putExtra("checklist", checklist);
+                intent.putExtra("section", childPosition);
                 startActivity(intent);
+                return true;
             }
         });
-*/
     }
 
     @Override

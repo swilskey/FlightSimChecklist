@@ -9,7 +9,7 @@
                 tools:context=".MainActivity"
                 android:background="@drawable/bg_gradient">
 
-    <ListView
+    <ExpandableListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@android:id/list"

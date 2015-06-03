@@ -17,11 +17,12 @@ public class ChecklistAdapter extends BaseAdapter {
 
     private Context mContext;
     private Checklist mChecklist;
-    private int mSection;
+    private String mSection;
+
     public ChecklistAdapter(Context context, Checklist checklist, String section) {
         mContext = context;
         mChecklist = checklist;
-        //mSection = section;
+        mSection = section;
     }
 
 
@@ -56,7 +57,7 @@ public class ChecklistAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.devLabel.setText(mChecklist.getChecklistItems().get(mChecklist)[position]);
+        holder.devLabel.setText(mChecklist.getChecklistItems().get(mSection)[position]);
 
         return convertView;
     }
