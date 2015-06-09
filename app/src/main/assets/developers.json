@@ -16,18 +16,17 @@
         },
         {
           "model": "Cessna 182",
-          "sections" : "checklists/a2a/c172/sections.json",
+          "sections" : "checklists/a2a/c182/sections.json",
           "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
+            "Normal": "checklists/a2a/c182/normal.json",
+            "Emergency": "checklists/a2a/c182/emergency.json"
           }
         },
         {
           "model": "Cherokee 180",
-          "sections" : "checklists/a2a/c172/sections.json",
+          "sections" : "checklists/a2a/ch180/sections.json",
           "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
+            "Normal": "checklists/a2a/ch180/normal.json"
           }
         }
       ]

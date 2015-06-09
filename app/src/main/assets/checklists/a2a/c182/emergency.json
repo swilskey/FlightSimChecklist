@@ -1,0 +1,28 @@
+{
+  "Takeoff Run Engine Failure": [
+    "Throttle,IDLE",
+    "Brakes,APPLY",
+    "Wing Flaps,RETRACT",
+    "Mixture,IDLE CUT OFF",
+    "Magnetos Switch,OFF",
+    "MASTER Switch,OFF"
+  ],
+  "After Takeoff Engine Failure": [
+    "Airspeed,70-75 KIAS",
+    "Mixture,IDLE CUT OFF",
+    "Fuel Selector Valve,OFF",
+    "Magnetos Switch,OFF",
+    "Wing Flaps,AS REQUIRED",
+    "MASTER Switch,OFF",
+    "Cabin Door,UNLATCH",
+    "Land,STRAIGHT AHEAD"
+  ],
+  "In Flight Engine Failure": [
+    "Airspeed,76 KIAS",
+    "Fuel Selector Valve,BOTH",
+    "Fuel Pump Switch,ON",
+    "Mixture,RICH",
+    "Magnetos Switch,BOTH OR START",
+    "Fuel Pump Switch,OFF"
+  ]
+}

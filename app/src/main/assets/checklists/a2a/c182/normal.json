@@ -110,5 +110,67 @@
     "Fuel Selector Valve,BOTH",
     "Cowl Flaps,OPEN AS REQUIRED"
   ],
-  "Cruise"
+  "Cruise": [
+    "Power,15-23in HG & 2000-2400 RPM",
+    "Elevator and Rudder Trim,ADJUST",
+    "Mixture,LEAN",
+    "Cowl Flaps,CLOSED"
+  ],
+  "Descent": [
+    "Power,AS DESIRED",
+    "Mixture,ENRICHEN AS REQUIRED",
+    "Cowl Flaps,CLOSED",
+    "Altimeter,SET",
+    "NAV/GPS Switch,SET",
+    "Fuel Selector Valve,BOTH",
+    "Wing Flaps,AS DESIRED"
+  ],
+  "Before Landing": [
+    "Seat Backs,UPRIGHT",
+    "Seat Belts,SECURED & LOCKED",
+    "Fuel Selector Valve,BOTH",
+    "Mixture,RICH",
+    "Propeller,HIGH RPM",
+    "Landing/Taxi Lights,ON",
+    "Autopilot,OFF"
+  ],
+  "Normal Landing": [
+    "Airspeed,70-80 KIAS",
+    "Wing Flaps,AS DESIRED",
+    "Airspeed,60 KIAS (Flaps FULL)",
+    "Trim,ADJUST",
+    "Touchdown,MAIN WHEELS FIRST",
+    "Landing Roll,LOWER NOSE WHEEL",
+    "Braking,MINIMUM REQUIRED"
+  ],
+  "Shortfield Landing": [
+    "Airspeed,70-80 KIAS",
+    "Wing Flaps,FULL (BELOW 100 KIAS)",
+    "Airspeed,60 KIAS",
+    "Trim,ADJUST",
+    "Touchdown,MAIN WHEELS FIRST",
+    "Brakes,APPLY HEAVILY",
+    "Wing Flaps,RETRACT"
+  ],
+  "Go Around": [
+    "Throttle,FULL OPEN & 2400 RPM",
+    "Wing Flaps,RETRACT TO 20 DEG",
+    "Climp Speed,55 KIAS",
+    "Wing Flaps,10 DEG"
+  ],
+  "After Landing": [
+    "Wing Flaps,UP",
+    "Cowl Flaps,OPEN"
+  ],
+  "Shutdown": [
+    "Parking Brake,SET",
+    "Throttle,IDLE",
+    "Electrical Equipment/Autopilot,OFF",
+    "Avionics Master Switch,OFF",
+    "Mixture,IDLE CUT OFF",
+    "Ignition Switch,OFF",
+    "MASTER Switch,OFF",
+    "Control Lock,INSTALL",
+    "Fuel Selector Valve,LEFT OR RIGHT"
+  ]
 }

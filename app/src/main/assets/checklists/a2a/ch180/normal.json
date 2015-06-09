@@ -1,52 +1,98 @@
 {
-  "Pre-Flight": [
-    "POH and Documents,AVAILABLE",
-    "Control Wheel Lock,REMOVE",
-    "Ignition Switch,OFF",
-    "Avionics and Electrical Switches,OFF",
-    "Pitot Tube Cover,REMOVE",
-    "Airplane Weight and Balance,CHECKED",
-    "MASTER Switch,ON",
-    "Flaps,DOWN",
-    "Fuel Quantity,CHECK",
-    "Static Pressure Alt. Source,OFF",
-    "Annunciator Panel Switch,TST AND HOLD",
-    "Annunciator Panel Switch,RELEASE",
-    "Fuel Selector Valve,BOTH",
-    "Fuel Shutoff Valve,ON (Push full in)",
-    "Pitot Heat,ON (Test for warmth 30sec)",
-    "Pitot Heat,OFF",
-    "Lights,CHECK IF NEEDED",
-    "MASTER Switch,OFF",
-    "Hobbs and Tach,CHECK"
-  ],
   "Before Engine Start": [
-    "Preflight,COMPLETE",
-    "Passenger Briefing,COMPLETE",
-    "Seats, Belts and Harnesses,ADJUSTED & LOCKED",
-    "Fuel Selector,BOTH",
-    "Fuel Shutoff Valve,ON (Push full in)",
-    "Avionics and Electrical Switches,OFF",
+    "Preflight Inspection,COMPLETE",
+    "Check Oil,6-8 QUARTS",
+    "Seat belts/Harness,ADJUST",
+    "Hobbs,CHECK",
+    "Fuel Selector,FULLEST TANK",
+    "Electrical Equipment,OFF",
     "Brakes,TEST & SET",
-    "Circuit Breakers,CHECK"
+    "Circuit Breakers,CHECK IN",
+    "Carb Heat,OFF"
   ],
   "Engine Start": [
-    "Throttle,OPEN (1/4in)",
-    "Mixture,IDLE CUT OFF",
+    "Prime,7 Strokes",
+    "Throttle,1/4 IN",
+    "Mixture,FULL RICH",
     "MASTER Switch,ON",
-    "Auxilliary Fuel Pump,ON",
+    "Carb Heat,OFF",
+    "Fuel Pump,ON",
+    "Fuel Flow +,FUEL PUMP OFF",
     "Propeller Area,CLEAR",
-    "Mixture,ADVANCE THEN IDLE CUT OFF",
-    "Auxilliary Fuel Pump,OFF",
-    "Beacon Light (NAV if required),ON",
-    "Ignition,START",
-    "Mixture,ADVANCE",
+    "Ignition Switch,START",
     "Oil Pressure,CHECK",
-    "NAV Lights,ON (as required)",
-    "Avionics Master Switch,ON",
-    "Radios,ON",
-    "Transponder,STBY",
+    "Flashing Beacon,ON"
+  ],
+  "Before Takeoff": [
+    "Parking Brake,SET",
+    "Flight Controls,FREE & CORRECT",
+    "Instruments,CHECK & SET",
+    "Fuel Selector,FULLEST TANK",
+    "Mixture,RICH",
+    "Elevator and Rudder Trim,SET",
+    "Throttle,2000 RPM",
+    "Magnetos,CHECK",
+    "Carb Heat,CHECK",
+    "Engine Instruments,CHECK",
+    "Alternator,CHECK LOAD",
+    "Vacuum,CHECK",
+    "Fuel Pump,OFF CHECK PRESS",
+    "Throttle,1000 RPM",
+    "Radios,SET",
+    "Mixture,SET",
+    "Carb Heat,OFF",
+    "Seat belts/Harness,CHECK",
+    "Door and Window,LATCHED"
+  ],
+  "Normal Takeoff": [
+    "Fuel Pump,ON",
+    "Lights/Strobes,ON",
+    "Transponder,ON",
+    "Throttle,FULL",
+    "Rotate,68 KTS"
+  ],
+  "Climb": [
+    "Throttle,FULL",
+    "Fuel Pump,OFF",
+    "Climb Speed,74 KTS"
+  ],
+  "Cruise": [
+    "Throttle,2350 RPM",
+    "Mixture,LEAN ABOVE 3000'",
+    "Fuel Selector,CHECK EVERY 30 MIN"
+  ],
+  "Descent": [
+    "Throttle,AS NEEDED",
+    "Altimeter,SET",
+    "Fuel Selector,FULLEST TANK",
+    "Mixture,AS REQUIRED",
+    "Fuel Pump,ON"
+  ],
+  "Landing": [
+    "Flaps,10 DEG",
+    "Throttle,AS NEEDED",
+    "Airspeed,70 KTS",
+    "Final Flaps,FULL"
+  ],
+  "Go Around": [
+    "Throttle,FULL",
+    "Flaps,RETRACT",
+  ],
+  "After Landing": [
     "Flaps,UP",
-    "ATIS,CHECK"
+    "Transponder,STANDBY",
+    "Fuel Pump,OFF",
+    "Strobes/Landing Light,OFF"
+  ],
+  "Shutdown": [
+    "Throttle,FULL IDLE",
+    "Electrical Equipment,OFF",
+    "Mixture,LEAN CUTOFF",
+    "Master Switch,OFF",
+    "Magnetos,OFF",
+    "Control Lock,INSTALL",
+    "Baggage Cmprtmnt,LOCK",
+    "Tiedown,COMPLETE",
+    "Flight Plan,CLOSE"
   ]
 }

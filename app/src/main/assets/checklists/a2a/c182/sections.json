@@ -1,5 +1,5 @@
 {
-  "normal_sections": [
+  "Normal": [
     "Pre Flight",
     "Before Engine Start",
     "Engine Start",
@@ -16,7 +16,7 @@
     "After Landing",
     "Shutdown"
   ],
-  "emergency_sections": [
+  "Emergency": [
     "Takeoff Run Engine Failure",
     "After Takeoff Engine Failure",
     "In Flight Engine Failure"
