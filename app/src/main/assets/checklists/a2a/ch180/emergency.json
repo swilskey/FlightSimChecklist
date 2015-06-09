@@ -1,0 +1,71 @@
+{
+  "Engine Loss During Takeoff": [
+    "If sufficient runaway remains for a normal landing land straight ahead",
+    "Maintain safe airspeed",
+    "Make shallow turns to avoid obstructions",
+    "Plan power off landing"
+  ],
+  "Engine Loss During Flight": [
+    "Fuel Selector,MOST FUEL",
+    "Electric Fuel Pump,ON",
+    "Mixture,RICH",
+    "Carburetor Heat,ON",
+    "Engine Gauges,CHECK",
+    "Primer,CHECK LOCKED",
+    "If power is restored",
+    "Carburetor heat,OFF",
+    "Electric Fuel Pump,OFF",
+    "If power is not restored prepare for power off landing",
+    "Trim,76 KIAS"
+  ],
+  "Power Off Landing": [
+    "Locate Suitable Field",
+    "Establish Spiral Pattern",
+    "1000 FT above field at downwind position for normal landing approach",
+    "When field can easily be reached, slow to 66 KIAS for shortest landing",
+    "Touchdown at lowest possible airspeed with full flaps",
+    "When committed to landing:",
+    "Ignition,OFF",
+    "MASTER Switch,OFF",
+    "Fuel Selector,OFF",
+    "Mixture,IDLE CUT OFF",
+    "Seat Belt & Harness,TIGHT"
+  ],
+  "Fire In Flight": [
+    "Source of Fire,CHECK",
+    "Electrical Fire (smoke in cabin):",
+    "MASTER Switch,OFF",
+    "Vents,OPEN",
+    "Cabin Heat,OFF",
+    "Land as soon as practicable",
+    "Engine Fire:",
+    "Fuel selector,OFF",
+    "Throttle,CLOSED",
+    "Mixture,IDLE CUT OFF",
+    "Fuel Pump,OFF",
+    "Heater and Defroster,OFF",
+    "Proceed with power off landing procedure"
+  ],
+  "Loss of Fuel Pressure": [
+    "Electric Fuel Pump,ON",
+    "Fuel Selector,CHECK FULL TANK",
+    "Land as soon as possible. Low fuel pressure may indicate a fuel leak"
+  ],
+  "Alternator Failure": [
+    "Verify Failure",
+    "Reduce electrical load as much as possible",
+    "Alternator Circuit Breakers,CHECK",
+    "Alt Switch,OFF for 1 SEC THEN ON",
+    "If no output:",
+    "Alt Switch,OFF",
+    "Reduce electrical load and land as practical"
+  ],
+  "Spin Recovery": [
+    "Throttle,IDLE",
+    "Ailerons,NEUTRAL",
+    "Rudder, FULL opposite to direction of rotation",
+    "Control Wheel,FULL FORWARD",
+    "Rudder,NEUTRAL",
+    "Control Wheel,REGAIN LEVEL FLIGHT"
+  ]
+}

@@ -1,12 +1,16 @@
 {
-  "normal_sections": [
-    "Pre-Flight",
-    "Before Engine Start",
-    "Engine Start"
-  ],
-  "emergency_sections": [
-    "Fire",
-    "Engine Fire",
-    "Engine Quits"
+  "Normal": [
+    "Flight Deck Safety Checks",
+    "Before Start",
+    "After Start",
+    "Taxi",
+    "Line Up",
+    "After Takeoff",
+    "Climb",
+    "Descent",
+    "Approach",
+    "Landing",
+    "After Landing",
+    "Shutdown"
   ]
 }

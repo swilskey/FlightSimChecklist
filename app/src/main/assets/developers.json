@@ -26,7 +26,8 @@
           "model": "Cherokee 180",
           "sections" : "checklists/a2a/ch180/sections.json",
           "checklists": {
-            "Normal": "checklists/a2a/ch180/normal.json"
+            "Normal": "checklists/a2a/ch180/normal.json",
+            "Emergency": "checklists/a2a/ch180/emergency.json"
           }
         }
       ]
@@ -59,26 +60,16 @@
       [
         {
           "model": "Boeing 737",
-          "sections" : "checklists/a2a/c172/sections.json",
+          "sections" : "checklists/pmdg/b737/sections.json",
           "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
+            "Normal": "checklists/pmdg/b737/normal.json"
           }
         },
         {
           "model": "Boeing 777",
-          "sections" : "checklists/a2a/c172/sections.json",
+          "sections" : "checklists/pmdg/b777/sections.json",
           "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
-          }
-        },
-        {
-          "model": "Boeing 747",
-          "sections" : "checklists/a2a/c172/sections.json",
-          "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
+            "Normal": "checklists/pmdg/b777/normal.json"
           }
         }
       ]
@@ -111,10 +102,9 @@
       [
         {
           "model": "Dash 8 - Q400",
-          "sections" : "checklists/a2a/c172/sections.json",
+          "sections" : "checklists/majestic/q400/sections.json",
           "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
+            "Normal": "checklists/majestic/q400/normal.json"
           }
         }
       ]

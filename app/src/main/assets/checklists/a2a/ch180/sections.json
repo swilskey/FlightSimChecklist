@@ -11,5 +11,14 @@
     "Go Around",
     "After Landing",
     "Shutdown"
+  ],
+  "Emergency": [
+    "Engine Loss During Takeoff",
+    "Engine Loss During Flight",
+    "Power Off Landing",
+    "Fire In Flight",
+    "Loss of Fuel Pressure",
+    "Alternator Failure",
+    "Spin Recovery"
   ]
 }
