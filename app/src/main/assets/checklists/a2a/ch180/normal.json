@@ -76,7 +76,7 @@
   ],
   "Go Around": [
     "Throttle,FULL",
-    "Flaps,RETRACT",
+    "Flaps,RETRACT"
   ],
   "After Landing": [
     "Flaps,UP",

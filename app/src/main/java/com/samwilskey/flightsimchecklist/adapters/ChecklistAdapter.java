@@ -26,7 +26,6 @@ public class ChecklistAdapter extends BaseAdapter {
         mSection = section;
     }
 
-
     @Override
     public int getCount() {
         return mChecklist.getChecklistItems().get(mSection).length;
@@ -60,7 +59,9 @@ public class ChecklistAdapter extends BaseAdapter {
         }
         String[] item = mChecklist.getChecklistItems().get(mSection)[position].split(",");
         holder.questionLabel.setText(item[0]);
-        holder.responseLabel.setText(item[1]);
+        if(item.length > 1) {
+            holder.responseLabel.setText(item[1]);
+        }
         if(mChecklist.getIsChecked()[position] == 1) {
             convertView.setBackgroundResource(0);
         } else {
@@ -73,5 +74,37 @@ public class ChecklistAdapter extends BaseAdapter {
     private static class ViewHolder {
         TextView questionLabel;
         TextView responseLabel;
+    }
+
+    public Context getContext() {
+        return mContext;
+    }
+
+    public void setContext(Context context) {
+        mContext = context;
+    }
+
+    public Checklist getChecklist() {
+        return mChecklist;
+    }
+
+    public void setChecklist(Checklist checklist) {
+        mChecklist = checklist;
+    }
+
+    public String getSection() {
+        return mSection;
+    }
+
+    public void setSection(String section) {
+        mSection = section;
+    }
+
+    public int[] getIsChecked() {
+        return mIsChecked;
+    }
+
+    public void setIsChecked(int[] isChecked) {
+        mIsChecked = isChecked;
     }
 }

@@ -85,10 +85,26 @@ public class ChecklistActivity extends Activity {
                 }
                 case R.id.nextButton: {
                     if(mIndex + 1 < mChecklist.getSections().length) {
-                        Intent intent = new Intent(ChecklistActivity.this, ChecklistActivity.class);
-                        intent.putExtra("checklist", mChecklist);
-                        intent.putExtra("section", mIndex + 1);
-                        startActivity(intent);
+                        for(int i = 0; i < mChecklist.getIsChecked().length; i++) {
+                            mChecklist.getIsChecked()[i] = 0;
+                        }
+                        mIndex += 1;
+                        mSection = mChecklist.getSections()[mIndex];
+
+                        mChecklist.setIsChecked(new int[mChecklist.getChecklistItems().get(mSection).length]);
+                        for(int i = 0; i < mChecklist.getIsChecked().length; i++) {
+                            mChecklist.getIsChecked()[i] = 0;
+                        }
+                        mChecklistName.setText(mSection);
+
+                        mAdapter.setSection(mSection);
+
+                        mAdapter.notifyDataSetChanged();
+
+                        //Intent intent = new Intent(ChecklistActivity.this, ChecklistActivity.class);
+                        //intent.putExtra("checklist", mChecklist);
+                        //intent.putExtra("section", mIndex + 1);
+                        //startActivity(intent);
                     } else {
                         Toast.makeText(ChecklistActivity.this, "Last Checklist", Toast.LENGTH_LONG).show();
                     }

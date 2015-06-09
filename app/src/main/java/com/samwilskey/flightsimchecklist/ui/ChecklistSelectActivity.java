@@ -3,6 +3,7 @@ package com.samwilskey.flightsimchecklist.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -45,20 +46,21 @@ public class ChecklistSelectActivity extends Activity {
         mJsonHelper = new JsonHelper(this);
 
         try {
-            for(int i = 0; i < mAircraft.getChecklistMap().size(); i++) {
+            for(int i = 0; i < mAircraft.getKeys().size(); i++) {
                 String key = mAircraft.getKeys().get(i);
                 Checklist checklist = mAircraft.getChecklistMap().get(key);
                 String fileName = checklist.getSectionFile();
+
                 String sectionData = mJsonHelper.loadJSONFromAsset(fileName);
                 checklist.setSections(mJsonHelper.parseChecklistSections(sectionData, key));
 
                 String checklistFile = checklist.getFile();
                 String checklistData = mJsonHelper.loadJSONFromAsset(checklistFile);
                 checklist.setChecklistItems(mJsonHelper.parseChecklistItems(checklistData, checklist));
-
             }
         } catch (IOException | JSONException e) {
-            e.printStackTrace();
+            e.getMessage();
+            Log.d(TAG,e.getMessage());
         }
 
         ChecklistSelectAdapter adapter = new ChecklistSelectAdapter(this, mAircraft);
