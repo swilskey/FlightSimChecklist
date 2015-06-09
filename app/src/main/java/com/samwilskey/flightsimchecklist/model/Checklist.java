@@ -18,6 +18,7 @@ public class Checklist implements Parcelable{
     private String mSectionFile;
     private String[] mSections;
     private Map<String, String[]> mChecklistItems;
+    private int[] mIsChecked;
 
     public Checklist() {
         mChecklistItems = new ArrayMap<String, String[]>();
@@ -75,6 +76,14 @@ public class Checklist implements Parcelable{
 
     public String[] getSections() {
         return mSections;
+    }
+
+    public int[] getIsChecked() {
+        return mIsChecked;
+    }
+
+    public void setIsChecked(int[] isChecked) {
+        mIsChecked = isChecked;
     }
 
     @Override

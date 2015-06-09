@@ -1,12 +1,24 @@
 {
   "normal_sections": [
-    "Pre-Flight",
+    "Pre Flight",
     "Before Engine Start",
-    "Engine Start"
+    "Engine Start",
+    "Before Takeoff",
+    "Normal Takeoff",
+    "Shortfield Takeoff",
+    "Climb",
+    "Cruise",
+    "Descent",
+    "Before Landing",
+    "Normal Landing",
+    "Shortfield Landing",
+    "Go Around",
+    "After Landing",
+    "Shutdown"
   ],
   "emergency_sections": [
-    "Fire",
-    "Engine Fire",
-    "Engine Quits"
+    "Takeoff Run Engine Failure",
+    "After Takeoff Engine Failure",
+    "In Flight Engine Failure"
   ]
 }

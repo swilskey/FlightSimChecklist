@@ -1,0 +1,30 @@
+{
+	"Takeoff Run Engine Failure": [
+    "Throttle,IDLE",
+    "Brakes,AS NEEDED",
+    "Flaps,RETRACT",
+    "Mixture,IDLE CUT OFF",
+    "Ignition Switch,OFF",
+    "Avionics and Electrical,OFF",
+    "MASTER Switch,OFF"
+  ],
+  "After Takeoff Engine Failure": [
+    "Airspeed,65 KTS",
+    "Mixture,IDLE CUT OFF",
+    "Fuel Selector,OFF",
+    "Ignition,OFF",
+    "Flaps,AS REQUIRED",
+    "MASTER Switch,OFF"
+  ],
+  "In Flight Engine Failure": [
+    "Best Glide,68 KTS",
+    "Decide Landing Target",
+    "Fuel Selector,CHECK POSITIONS",
+    "Mixture,RICH",
+    "Auxiliary Fuel Pump,ON",
+    "Fuel Shutoff Valve,PUSH IN",
+    "Primer,IN & LOCKED",
+    "Ignition Switch,BOTH LEFT RIGHT",
+    "If Engine Doesn't Start Prepare For Forced Landing"
+  ]
+}

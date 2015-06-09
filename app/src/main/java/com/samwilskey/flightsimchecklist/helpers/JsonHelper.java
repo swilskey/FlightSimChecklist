@@ -22,6 +22,8 @@ import java.util.Map;
  */
 public class JsonHelper {
 
+    public static final String TAG = JsonHelper.class.getSimpleName();
+
     private Context mContext;
 
     public JsonHelper(Context context) {

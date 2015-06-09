@@ -3,11 +3,12 @@ package com.samwilskey.flightsimchecklist.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.samwilskey.flightsimchecklist.R;
 import com.samwilskey.flightsimchecklist.adapters.ChecklistAdapter;
@@ -20,11 +21,20 @@ public class ChecklistActivity extends Activity {
 
     private Checklist mChecklist;
     private String mSection;
+    int mIndex;
+    private ChecklistAdapter mAdapter;
 
     @InjectView(android.R.id.list)
     ListView mListView;
     @InjectView(android.R.id.empty)
     TextView mEmptyTextView;
+    @InjectView(R.id.nextButton)
+    Button mNextButton;
+    @InjectView(R.id.resetButton)
+    Button mLastButton;
+    @InjectView(R.id.checklistName)
+    TextView mChecklistName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,27 +44,59 @@ public class ChecklistActivity extends Activity {
 
         Intent intent = getIntent();
         mChecklist = intent.getParcelableExtra("checklist");
-        mSection = mChecklist.getSections()[intent.getIntExtra("section", 0)];
+        mIndex = intent.getIntExtra("section", 0);
+        mSection = mChecklist.getSections()[mIndex];
 
-        //mEmptyTextView.setText(mChecklist.getSections()[mSection]);
+        mChecklist.setIsChecked(new int[mChecklist.getChecklistItems().get(mSection).length]);
+        for(int i = 0; i < mChecklist.getIsChecked().length; i++) {
+            mChecklist.getIsChecked()[i] = 0;
+        }
 
+        mLastButton.setOnClickListener(buttonClick);
+        mNextButton.setOnClickListener(buttonClick);
+        mChecklistName.setText(mSection);
 
-        ChecklistAdapter adapter = new ChecklistAdapter(this, mChecklist, mSection);
-        mListView.setAdapter(adapter);
+        mAdapter = new ChecklistAdapter(this, mChecklist, mSection);
+        mListView.setAdapter(mAdapter);
         mListView.setEmptyView(mEmptyTextView);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                view.setBackgroundColor(getResources().getColor(android.R.color.holo_red_dark));
+                if(mChecklist.getIsChecked()[position] == 0) {
+                    view.setBackgroundResource(0);
+                    mChecklist.getIsChecked()[position] = 1;
+                }
+
             }
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_checklist, menu);
-        return true;
-    }
+    private View.OnClickListener buttonClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.resetButton: {
+                    for(int i = 0; i < mChecklist.getIsChecked().length; i++) {
+                        mChecklist.getIsChecked()[i] = 0;
+                    }
+                    mAdapter.notifyDataSetChanged();
+                    break;
+                }
+                case R.id.nextButton: {
+                    if(mIndex + 1 < mChecklist.getSections().length) {
+                        Intent intent = new Intent(ChecklistActivity.this, ChecklistActivity.class);
+                        intent.putExtra("checklist", mChecklist);
+                        intent.putExtra("section", mIndex + 1);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(ChecklistActivity.this, "Last Checklist", Toast.LENGTH_LONG).show();
+                    }
+                    break;
+                }
+
+            }
+        }
+    };
+
 }

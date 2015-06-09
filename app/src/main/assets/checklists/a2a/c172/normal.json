@@ -23,7 +23,7 @@
   "Before Engine Start": [
     "Preflight,COMPLETE",
     "Passenger Briefing,COMPLETE",
-    "Seats, Belts and Harnesses,ADJUSTED & LOCKED",
+    "Seats/Belts and Harnesses,ADJUSTED & LOCKED",
     "Fuel Selector,BOTH",
     "Fuel Shutoff Valve,ON (Push full in)",
     "Avionics and Electrical Switches,OFF",
@@ -48,5 +48,122 @@
     "Transponder,STBY",
     "Flaps,UP",
     "ATIS,CHECK"
+  ],
+  "Before Takeoff": [
+    "Parking Brakes,SET",
+    "Seats/Belts and Harnesses,CHECKED",
+    "Doors,CLOSED & LATCHED",
+    "Flight Controls,FREE & CLEAR",
+    "Flight Instruments,CHECK & SET",
+    "Fuel Quantity,CHECK",
+    "Fuel Selector,RECHECK BOTH",
+    "Mixture,RICH",
+    "Elevator Trim,SET FOR TAKEOFF",
+    "Throttle,1800 RPM",
+    "MAGNETOS Switch,CHECK",
+    "Suction Gage,CHECK",
+    "Ammeters and Low Voltage,CHECK",
+    "Verify Smooth Idle Operation,575-625 RPM",
+    "Throttle,1000 RPM or LESS",
+    "Strobe Lights,AS DESIRED",
+    "Radios and Avionics,SET",
+    "Autopilot,OFF",
+    "Emergency Procedures,REVIEWED",
+    "Departure Plans,REVIEWED",
+    "Takeoff Checklist,REVIEW",
+    "Brakes,RELEASE",
+    "Contact Tower,SEE FREQ"
+  ],
+  "Normal Takeoff": [
+    "Flaps,UP",
+    "Transponder,ON/ALT",
+    "Landing Light,ON",
+    "Time,NOTE",
+    "Heading Indicator,CHECK W/RWY",
+    "Mixture,RICH",
+    "Engine Instruments,CHECK",
+    "Rotate,55 KTS",
+    "Climb Speed,70-80 KTS"
+  ],
+  "Shortfield Takeoff": [
+    "Flaps,10 DEG",
+    "Transponder,ON/ALT",
+    "Landing Light,ON",
+    "Time,NOTE",
+    "Heading Indicator,CHECK W/RWY",
+    "Brakes,APPLY",
+    "Throttle,FULL OPEN",
+    "Mixture,RICH",
+    "Engine Instruments,CHECK",
+    "Brakes,RELEASE",
+    "Rotate,56 KTS (Vr)",
+    "Climb Speed, 62 KTS (Vx)",
+    "Flaps,RETRACT AFTER POS RATE"
+  ],
+  "Enroute Climb": [
+    "Airspeed,75-85 KTS",
+    "Throttle,FULL OPEN",
+    "Mixture,RICH"
+  ],
+  "Cruise": [
+    "Power,2000-2600 RPM",
+    "Elevator Trim,ADJUST AS NEEDED",
+    "Mixture,LEAN AS NEEDED",
+    "Landing Light,OFF",
+    "Heading Indicator,CHECK W/COMPASS"
+  ],
+  "Descent": [
+    "Throttle,AS DESIRED",
+    "Mixture,ADJUST FOR ALTITUDE",
+    "Fuel Selector,BOTH"
+  ],
+  "Before Landing": [
+    "Seats/Belts and Harnesses,CHECKED",
+    "Fuel Selector,BOTH",
+    "Mixture,RICH",
+    "Landing Light,ON",
+    "Autopilot,OFF"
+  ],
+  "Normal Landing": [
+    "Downwind Airspeed,85 KTS",
+    "Downwind Flaps,10 DEG",
+    "Base Airspeed,75 KTS",
+    "Base Flaps,20 DEG",
+    "Final Airspeed,70 KTS",
+    "Final Flaps,30-40 DEG"
+  ],
+  "Shortfield Landing": [
+    "Airspeed,65 KTS on FINAL",
+    "Flaps,FULL",
+    "Power,REDUCE",
+    "Touchdown,MAIN WHEELS FIRST",
+    "Brakes,APPLY AS NEEDED",
+    "Flaps,RETRACT",
+    "Controls,HOLD FULL AFT"
+  ],
+  "Go Around": [
+    "Pitch,UP",
+    "Throttle,FULL OPEN",
+    "Flaps,RETRACT",
+    "Climb Speed,60 KTS"
+  ],
+  "After Landing": [
+    "Flaps,RETRACT",
+    "Landing Light,OFF",
+    "Transponder,OFF"
+  ],
+  "Shutdown": [
+    "Brakes,SET",
+    "Avionics and Electrical,OFF",
+    "Mixture,IDLE CUT OFF",
+    "NAV Lights,OFF",
+    "Ignition Switch,OFF",
+    "MASTER Switch,OFF",
+    "Fuel Selector,RIGHT or LEFT",
+    "Control Lock,SET",
+    "Tie Downs,CONNECT",
+    "Pitot Cover,INSTALL",
+    "Hobbs and Tach,RECORD",
+    "Flight Plan,CLOSE"
   ]
 }

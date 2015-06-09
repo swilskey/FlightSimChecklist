@@ -11,7 +11,7 @@
           "sections" : "checklists/a2a/c172/sections.json",
           "checklists": {
             "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
+            "Emergency": "checklists/a2a/c172/emergency.json"
           }
         },
         {

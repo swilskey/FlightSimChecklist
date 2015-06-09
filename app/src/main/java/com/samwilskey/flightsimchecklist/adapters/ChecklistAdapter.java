@@ -18,6 +18,7 @@ public class ChecklistAdapter extends BaseAdapter {
     private Context mContext;
     private Checklist mChecklist;
     private String mSection;
+    private int[] mIsChecked;
 
     public ChecklistAdapter(Context context, Checklist checklist, String section) {
         mContext = context;
@@ -47,22 +48,30 @@ public class ChecklistAdapter extends BaseAdapter {
         ViewHolder holder;
 
         if(convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.dev_list_item, null);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.checklist_item, null);
             holder = new ViewHolder();
-            holder.devLabel = (TextView) convertView.findViewById(R.id.devLabel);
+            holder.questionLabel = (TextView) convertView.findViewById(R.id.questionLabel);
+            holder.responseLabel = (TextView) convertView.findViewById(R.id.responseLabel);
 
             convertView.setTag(holder);
         }
         else {
             holder = (ViewHolder) convertView.getTag();
         }
-
-        holder.devLabel.setText(mChecklist.getChecklistItems().get(mSection)[position]);
+        String[] item = mChecklist.getChecklistItems().get(mSection)[position].split(",");
+        holder.questionLabel.setText(item[0]);
+        holder.responseLabel.setText(item[1]);
+        if(mChecklist.getIsChecked()[position] == 1) {
+            convertView.setBackgroundResource(0);
+        } else {
+            convertView.setBackgroundResource(R.drawable.bg_not_checked);
+        }
 
         return convertView;
     }
 
     private static class ViewHolder {
-        TextView devLabel;
+        TextView questionLabel;
+        TextView responseLabel;
     }
 }
