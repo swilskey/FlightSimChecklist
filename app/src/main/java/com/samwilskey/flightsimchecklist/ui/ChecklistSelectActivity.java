@@ -3,7 +3,6 @@ package com.samwilskey.flightsimchecklist.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -59,8 +58,7 @@ public class ChecklistSelectActivity extends Activity {
                 checklist.setChecklistItems(mJsonHelper.parseChecklistItems(checklistData, checklist));
             }
         } catch (IOException | JSONException e) {
-            e.getMessage();
-            Log.d(TAG,e.getMessage());
+            e.printStackTrace();
         }
 
         ChecklistSelectAdapter adapter = new ChecklistSelectAdapter(this, mAircraft);

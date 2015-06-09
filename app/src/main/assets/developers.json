@@ -33,28 +33,6 @@
       ]
     },
     {
-      "name": "Aerosoft",
-      "models":
-      [
-        {
-          "model": "Airbus A320",
-          "sections" : "checklists/a2a/c172/sections.json",
-          "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
-          }
-        },
-        {
-          "model": "Airbus A318",
-          "sections" : "checklists/a2a/c172/sections.json",
-          "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
-          }
-        }
-      ]
-    },
-    {
       "name": "PMDG",
       "models":
       [
@@ -70,28 +48,6 @@
           "sections" : "checklists/pmdg/b777/sections.json",
           "checklists": {
             "Normal": "checklists/pmdg/b777/normal.json"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Carenado",
-      "models":
-      [
-        {
-          "model": "S550 Citation II",
-          "sections" : "checklists/a2a/c172/sections.json",
-          "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
-          }
-        },
-        {
-          "model": "Pilatus PC12",
-          "sections" : "checklists/a2a/c172/sections.json",
-          "checklists": {
-            "Normal": "checklists/a2a/c172/normal.json",
-            "Emergency": "checklists/a2a/c172/normal.json"
           }
         }
       ]
