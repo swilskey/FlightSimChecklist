@@ -11,8 +11,8 @@
         android:layout_height="match_parent"
         android:id="@android:id/list"
         android:layout_above="@+id/linearLayout"
-        android:divider="@null"
-        android:layout_below="@+id/checklistName"/>
+        android:layout_below="@+id/checklistName"
+        android:dividerHeight="2dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,6 +49,7 @@
     </LinearLayout>
 
     <TextView
+        android:background="@color/accent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"

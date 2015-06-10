@@ -32,6 +32,8 @@ public class ChecklistSelectActivity extends Activity {
     ExpandableListView mListView;
     @InjectView(android.R.id.empty)
     TextView mEmptyList;
+    @InjectView(R.id.aircraftName)
+    TextView mAircraftName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +44,12 @@ public class ChecklistSelectActivity extends Activity {
         Intent intent = getIntent();
         mAircraft = intent.getParcelableExtra("aircraft");
 
+        mAircraftName.setText(mAircraft.getName());
+
         mJsonHelper = new JsonHelper(this);
 
         try {
-            for(int i = 0; i < mAircraft.getKeys().size(); i++) {
-                String key = mAircraft.getKeys().get(i);
+            for(String key : mAircraft.getKeys()) {
                 Checklist checklist = mAircraft.getChecklistMap().get(key);
                 String fileName = checklist.getSectionFile();
 
@@ -57,6 +60,7 @@ public class ChecklistSelectActivity extends Activity {
                 String checklistData = mJsonHelper.loadJSONFromAsset(checklistFile);
                 checklist.setChecklistItems(mJsonHelper.parseChecklistItems(checklistData, checklist));
             }
+
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
