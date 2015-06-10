@@ -67,7 +67,10 @@ public class ChecklistActivity extends Activity {
                     view.setBackgroundResource(0);
                     mChecklist.getIsChecked()[position] = 1;
                 }
-
+                else {
+                    view.setBackgroundResource(R.drawable.bg_not_checked);
+                    mChecklist.getIsChecked()[position] = 0;
+                }
             }
         });
     }
@@ -101,10 +104,6 @@ public class ChecklistActivity extends Activity {
 
                         mAdapter.notifyDataSetChanged();
 
-                        //Intent intent = new Intent(ChecklistActivity.this, ChecklistActivity.class);
-                        //intent.putExtra("checklist", mChecklist);
-                        //intent.putExtra("section", mIndex + 1);
-                        //startActivity(intent);
                     } else {
                         Toast.makeText(ChecklistActivity.this, "Last Checklist", Toast.LENGTH_LONG).show();
                     }
