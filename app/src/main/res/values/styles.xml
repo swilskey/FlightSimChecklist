@@ -2,7 +2,16 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="toolbar_style" parent="">
+        <item name="popupTheme">@style/toolbar_popup_style</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="toolbar_popup_style" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/accent</item>
     </style>
 
 </resources>

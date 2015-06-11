@@ -5,12 +5,20 @@
                 tools:context=".MainActivity"
                 android:background="@drawable/bg_gradient">
 
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/activity_toolbars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <ExpandableListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@android:id/list"
         android:divider="@android:color/black"
-        android:dividerHeight="1dp" />
+        android:dividerHeight="1dp"
+        android:layout_below="@+id/toolbar_actionbar"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

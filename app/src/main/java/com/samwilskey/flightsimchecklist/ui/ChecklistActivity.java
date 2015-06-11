@@ -1,8 +1,11 @@
 package com.samwilskey.flightsimchecklist.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -17,12 +20,14 @@ import com.samwilskey.flightsimchecklist.model.Checklist;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class ChecklistActivity extends Activity {
+public class ChecklistActivity extends AppCompatActivity {
 
     private Checklist mChecklist;
     private String mSection;
-    int mIndex;
+    private int mIndex;
     private ChecklistAdapter mAdapter;
+    private Toolbar mToolbar;
+    private android.support.v7.app.ActionBar abMain = null;
 
     @InjectView(android.R.id.list)
     ListView mListView;
@@ -32,8 +37,6 @@ public class ChecklistActivity extends Activity {
     Button mNextButton;
     @InjectView(R.id.resetButton)
     Button mLastButton;
-    @InjectView(R.id.checklistName)
-    TextView mChecklistName;
 
 
     @Override
@@ -41,6 +44,12 @@ public class ChecklistActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checklist);
         ButterKnife.inject(this);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        abMain = getSupportActionBar();
+        abMain.setHomeButtonEnabled(true);
 
         Intent intent = getIntent();
         mChecklist = intent.getParcelableExtra("checklist");
@@ -54,7 +63,6 @@ public class ChecklistActivity extends Activity {
 
         mLastButton.setOnClickListener(buttonClick);
         mNextButton.setOnClickListener(buttonClick);
-        mChecklistName.setText(mSection);
 
         mAdapter = new ChecklistAdapter(this, mChecklist, mSection);
         mListView.setAdapter(mAdapter);
@@ -98,10 +106,8 @@ public class ChecklistActivity extends Activity {
                         for(int i = 0; i < mChecklist.getIsChecked().length; i++) {
                             mChecklist.getIsChecked()[i] = 0;
                         }
-                        mChecklistName.setText(mSection);
 
                         mAdapter.setSection(mSection);
-
                         mAdapter.notifyDataSetChanged();
 
                     } else {
@@ -114,4 +120,25 @@ public class ChecklistActivity extends Activity {
         }
     };
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_checklist, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.settings) {
+            return true;
+        }
+        else if(id == R.id.reset) {
+            for(int i = 0; i < mChecklist.getIsChecked().length; i++) {
+                mChecklist.getIsChecked()[i] = 0;
+            }
+            mAdapter.notifyDataSetChanged();
+        }
+        return false;
+    }
 }

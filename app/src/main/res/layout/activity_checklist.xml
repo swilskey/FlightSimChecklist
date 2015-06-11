@@ -6,12 +6,18 @@
                 android:id="@+id/mainLayout"
                 tools:context="com.samwilskey.flightsimchecklist.ui.ChecklistActivity">
 
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/activity_toolbars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@android:id/list"
         android:layout_above="@+id/linearLayout"
-        android:layout_below="@+id/checklistName"
+        android:layout_below="@+id/toolbar_actionbar"
         android:dividerHeight="2dp"/>
 
     <TextView
@@ -48,18 +54,5 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
-    <TextView
-        android:background="@color/accent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:text="Before Takeoff"
-        android:id="@+id/checklistName"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textColor="#ffffffff"
-        android:textSize="32dp"
-        android:gravity="center"/>
 
 </RelativeLayout>

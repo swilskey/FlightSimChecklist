@@ -1,8 +1,9 @@
 package com.samwilskey.flightsimchecklist.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -21,19 +22,18 @@ import java.io.IOException;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class ChecklistSelectActivity extends Activity {
+public class ChecklistSelectActivity extends AppCompatActivity {
 
     public static final String TAG = ChecklistSelectActivity.class.getSimpleName();
 
     private Aircraft mAircraft;
     private JsonHelper mJsonHelper;
+    private Toolbar mToolbar;
 
     @InjectView(android.R.id.list)
     ExpandableListView mListView;
     @InjectView(android.R.id.empty)
     TextView mEmptyList;
-    @InjectView(R.id.aircraftName)
-    TextView mAircraftName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,30 +41,36 @@ public class ChecklistSelectActivity extends Activity {
         setContentView(R.layout.activity_checklist_select);
         ButterKnife.inject(this);
 
-        Intent intent = getIntent();
-        mAircraft = intent.getParcelableExtra("aircraft");
+        mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mAircraftName.setText(mAircraft.getName());
+        if(savedInstanceState != null) {
+            mAircraft = savedInstanceState.getParcelable("aircraft");
+        } else {
 
-        mJsonHelper = new JsonHelper(this);
+            Intent intent = getIntent();
+            mAircraft = intent.getParcelableExtra("aircraft");
 
-        try {
-            for(String key : mAircraft.getKeys()) {
-                Checklist checklist = mAircraft.getChecklistMap().get(key);
-                String fileName = checklist.getSectionFile();
+            mJsonHelper = new JsonHelper(this);
 
-                String sectionData = mJsonHelper.loadJSONFromAsset(fileName);
-                checklist.setSections(mJsonHelper.parseChecklistSections(sectionData, key));
+            try {
+                for (String key : mAircraft.getKeys()) {
+                    Checklist checklist = mAircraft.getChecklistMap().get(key);
+                    String fileName = checklist.getSectionFile();
 
-                String checklistFile = checklist.getFile();
-                String checklistData = mJsonHelper.loadJSONFromAsset(checklistFile);
-                checklist.setChecklistItems(mJsonHelper.parseChecklistItems(checklistData, checklist));
+                    String sectionData = mJsonHelper.loadJSONFromAsset(fileName);
+                    checklist.setSections(mJsonHelper.parseChecklistSections(sectionData, key));
+
+                    String checklistFile = checklist.getFile();
+                    String checklistData = mJsonHelper.loadJSONFromAsset(checklistFile);
+                    checklist.setChecklistItems(mJsonHelper.parseChecklistItems(checklistData, checklist));
+                }
+
+            } catch (IOException | JSONException e) {
+                e.printStackTrace();
             }
-
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
         }
-
         ChecklistSelectAdapter adapter = new ChecklistSelectAdapter(this, mAircraft);
         mListView.setAdapter(adapter);
         mListView.setEmptyView(mEmptyList);
@@ -90,5 +96,4 @@ public class ChecklistSelectActivity extends Activity {
         getMenuInflater().inflate(R.menu.menu_checklist, menu);
         return true;
     }
-
 }

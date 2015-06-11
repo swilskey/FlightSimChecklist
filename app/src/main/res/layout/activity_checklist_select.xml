@@ -5,12 +5,18 @@
                 tools:context=".MainActivity"
                 android:background="@drawable/bg_gradient">
 
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/activity_toolbars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <ExpandableListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@android:id/list"
         android:divider="@android:color/black"
-        android:layout_below="@+id/aircraftName"
+        android:layout_below="@+id/toolbar_actionbar"
         android:dividerHeight="1dp" />
     <TextView
         android:layout_width="match_parent"
@@ -21,21 +27,6 @@
         android:textColor="@android:color/white"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="false"
         android:gravity="center"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:text="Before Takeoff"
-        android:id="@+id/aircraftName"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@color/accent"
-        android:textColor="#ffffffff"
-        android:textSize="32dp"
-        android:gravity="center"/>
 </RelativeLayout>
