@@ -64,6 +64,19 @@
           }
         }
       ]
+    },
+    {
+      "name": "DCS",
+      "models":
+      [
+        {
+          "model": "A-10C",
+          "sections" : "checklists/dcs/a10c/sections.json",
+          "checklists": {
+            "Normal": "checklists/dcs/a10c/normal.json"
+          }
+        }
+      ]
     }
   ]
 }

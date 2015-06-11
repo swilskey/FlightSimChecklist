@@ -1,0 +1,16 @@
+{
+  "Normal": [
+    "Before Engine Start",
+    "Engine Start",
+    "Before Taxi",
+    "Taxi",
+    "Before Takeoff",
+    "Lineup Check",
+    "Takeoff",
+    "Airborne",
+    "Initial Approach",
+    "Before Landing",
+    "After Landing",
+    "Engine Shutdown"
+  ]
+}
