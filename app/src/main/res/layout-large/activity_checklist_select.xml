@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout android:id="@+id/LinearLayout1"
+                  xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:baselineAligned="false"
+                  android:layout_below="@+id/toolbar_actionbar"
+                  android:orientation="horizontal"
+                  android:showDividers="middle">
+
+
+        <fragment
+            android:id="@+id/fragmentItemsList"
+            android:name="com.samwilskey.flightsimchecklist.ui.ChecklistSelectFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_select_list"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            />
+
+        <FrameLayout
+            android:id="@+id/flDetailContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/bg_gradient"
+            tools:layout="@layout/activity_checklist">
+
+            <TextView
+                android:id="@+id/selectChecklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Select a Checklist"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textSize="42sp"/>
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>

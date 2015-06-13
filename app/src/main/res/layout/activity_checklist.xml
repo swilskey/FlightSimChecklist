@@ -1,58 +1,18 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bg_gradient"
-                android:id="@+id/mainLayout"
-                tools:context="com.samwilskey.flightsimchecklist.ui.ChecklistActivity">
-
-    <include
-        android:id="@+id/toolbar_actionbar"
-        layout="@layout/activity_toolbars"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@android:id/list"
-        android:layout_above="@+id/linearLayout"
-        android:layout_below="@+id/toolbar_actionbar"
-        android:dividerHeight="2dp"/>
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/flDetailContainer"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ChecklistActivity"
+             android:background="@drawable/bg_gradient">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/list_view_error"
-        android:id="@android:id/empty"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout"
-        android:background="@drawable/bg_buttons">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/reset_button"
-            android:id="@+id/resetButton"
-            android:layout_weight="1"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/next_button"
-            android:id="@+id/nextButton"
-            android:layout_weight="1"/>
-    </LinearLayout>
-
-
-</RelativeLayout>
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select Checklist"
+        android:id="@+id/textView"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"/>
+</FrameLayout>
