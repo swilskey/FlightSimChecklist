@@ -29,6 +29,14 @@
             "Normal": "checklists/a2a/ch180/normal.json",
             "Emergency": "checklists/a2a/ch180/emergency.json"
           }
+        },
+        {
+          "model": "Comanche 250",
+          "sections" : "checklists/a2a/pc250/sections.json",
+          "checklists": {
+            "Normal": "checklists/a2a/pc250/normal.json",
+            "Emergency": "checklists/a2a/pc250/emergency.json"
+          }
         }
       ]
     },

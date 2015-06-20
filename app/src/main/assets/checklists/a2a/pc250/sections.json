@@ -15,5 +15,17 @@
     "Go Around",
     "After Landing",
     "Shutdown"
+  ],
+  "Emergency": [
+    "Engine Loss During Flight",
+    "Power Off Landing",
+    "Gear Down Emergency Landing",
+    "Gear Up Emergency Landing",
+    "Fire In Flight",
+    "Loss of Fuel Pressure",
+    "High Oil Temperature",
+    "Propeller Overspeed",
+    "Alternator Failure",
+    "Spin Recovery"
   ]
 }
