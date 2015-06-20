@@ -1,0 +1,19 @@
+{
+  "Normal": [
+    "Pre-Flight",
+    "Before Engine Start",
+    "Engine Start",
+    "Taxi",
+    "Runup",
+    "Before Takeoff",
+    "Normal Takeoff",
+    "Shortfield Takeoff",
+    "Climb",
+    "Cruise",
+    "Descent",
+    "Before Landing",
+    "Go Around",
+    "After Landing",
+    "Shutdown"
+  ]
+}
