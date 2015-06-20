@@ -1,0 +1,99 @@
+{
+  "Engine Loss During Flight": [
+    "Airspeed,8 6KTS",
+    "Fuel selector,FULLEST TANK",
+    "Electric fuel pump,ON",
+    "Mixture,RICH",
+    "Carburetor Heat,ON",
+    "Primer,CHECK IN & LOCKED",
+    "Magnetos,CHECK",
+    "Engine Gauges,CHECK",
+    "Fuel Pressure,CHECK",
+    "When power is restored:",
+    "Carburetor Heat,OFF",
+    "Electric Fuel Pump,OFF",
+    "If power is not restored prepare for power off landing"
+  ],
+  "Power Off Landing": [
+    "Airspeed,84 KTS",
+    "Locate suitable field",
+    "Establish a spiral pattern",
+    "Transponder,SQUAWK 7700",
+    "Radio,AS REQUIRED"
+  ],
+  "Gear Down Emergency Landing": [
+    "Landing Gear,DOWN",
+    "Throttle,CLOSE",
+    "Mixture,IDLE CUT-OFF",
+    "Ignition,OFF",
+    "Master Switch,OFF",
+    "Fuel Selector,OFF",
+    "Seat belt and harness,TIGHT",
+    "Door,UNLATCH"
+  ],
+  "Gear Up Emergency Landing": [
+    "Flaps,AS REQUIRED",
+    "Throttle,CLOSE",
+    "Mixture,IDLE CUT-OFF",
+    "Ignition Switch,OFF",
+    "Master Switch,OFF",
+    "Fuel Selector,OFF",
+    "Seat Belt and Harness,TIGHT",
+    "Contact surface at minimum possible airspeed",
+    "Door,UNLATCH"
+  ],
+  "Fire In Flight": [
+    "Source of Fire,CHECK",
+    "Electrical fire (smoke in cabin):",
+    "Master Switch,OFF",
+    "Generator Circuit Breaker,PULL",
+    "Vents,OPEN",
+    "Door,OPEN AS EXHAUST",
+    "Cabin Heat,OFF",
+    "Land as soon as Practicable",
+    "Engine fire:",
+    "Fuel Selector,OFF",
+    "Throttle,CLOSED",
+    "Mixture,IDLE CUT-OFF",
+    "Electric Fuel Pump,CHECK OFF",
+    "Heater and Defroster,OFF",
+    "Proceed with Power Off Landing Procedure"
+  ],
+  "Loss of Fuel Pressure": [
+    "Electric Fuel Pump,ON",
+    "Fuel Selector,CHECK TANK",
+    "4. Land as soon as Possible"
+  ],
+  "High Oil Temperature": [
+    "Power,REDUCE",
+    "Mixture,ENRICH",
+    "Airspeed,MAINTAIN AIRSPEED",
+    "Land at nearest Airport",
+    "Prepare for a Power Off Landing"
+  ],
+  "Propeller Overspeed": [
+    "Throttle,RETARD",
+    "Oil Pressure,CHECK",
+    "Prop Control,FULL DECREASE",
+    "Airspeed,REDUCE",
+    "Throttle,AS REQUIRED"
+  ],
+  "Alternator Failure": [
+    "Verify Failure",
+    "Reduce Electrical Load",
+    "Alternator Circuit Breakers,CHECK",
+    "Alt Switch,CYCLE",
+    "If No Output:",
+    "Alt Switch,OFF",
+    "Reduce Electrical Load",
+    "Land as Soon as Practical"
+  ],
+  "Spin Recovery": [
+    "Throttle,IDLE",
+    "Ailerons,NEUTRAL",
+    "Rudder,Full Opposite to Direction of Spin",
+    "Control Wheel,FULL FORWARD",
+    "Rudder,NEUTRAL",
+    "Control Wheel,SMOOTHLY"
+  ]
+}
